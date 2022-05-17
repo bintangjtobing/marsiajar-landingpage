@@ -15,6 +15,15 @@ use Illuminate\Support\Facades\Route;
 // Social media link
 Route::get('/linkedin', function () {
     return Redirect::to('https://linkedin.com/company/');
+
+Route::prefix('sc/dev')->group(function () {
+    Route::get('/uat', function () {
+        return Redirect::to('https://docs.google.com/spreadsheets/d/e/2PACX-1vTSANWYAzhvdIu6A8GSpy5KhjsZeUamYlbvWWhmES13PUwAsDy0-TJ4uErmZgxSLR5DUOIZckGO5G20/pubhtml');
+    });
+});
+
+Route::get('/', function () {
+    return view('welcome');
 });
 Route::get('/instagram', function () {
     return Redirect::to('http://www.instagram.com/');
