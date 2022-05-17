@@ -22,7 +22,7 @@ Route::prefix('sc/dev')->group(function () {
 // Social media link
 Route::get('/linkedin', function () {
     return Redirect::to('https://linkedin.com/company/');
-
+});
 
 Route::get('/', function () {
     return view('welcome');
