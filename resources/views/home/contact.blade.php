@@ -102,22 +102,21 @@
                 <div class="sidebar col-lg-3">
 
                     <address>
-                        <strong>Headquarters:</strong><br>
-                        795 Folsom Ave, Suite 600<br>
-                        San Francisco, CA 94107<br>
+                        <strong>Kantor kami:</strong><br>
+                        Jalan jalan kenangan No.200 <br>
+                        Kecamatan Medan Tuntungan, Sumatera Utara
                     </address>
-                    <abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
-                    <abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
-                    <abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+                    <abbr title="Phone Number"><strong>Phone:</strong></abbr> +62 812 3456 7890<br>
+                    <abbr title="Email Address"><strong>Email:</strong></abbr> info@marsiajar.com
 
                     <div class="widget border-0 pt-0">
 
-                        <a href="#" class="social-icon si-small si-dark si-facebook">
+                        <a href="/facebook" class="social-icon si-small si-dark si-facebook">
                             <i class="icon-facebook"></i>
                             <i class="icon-facebook"></i>
                         </a>
 
-                        <a href="#" class="social-icon si-small si-dark si-instagram">
+                        <a href="instagram" class="social-icon si-small si-dark si-instagram">
                             <i class="icon-instagram"></i>
                             <i class="icon-instagram"></i>
                         </a>

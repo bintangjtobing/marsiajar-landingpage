@@ -27,7 +27,7 @@ class webpageController extends Controller
     }
     public function gallery()
     {
-        return view('home.index');
+        return view('home.galleries');
     }
     public function aboutUs()
     {
