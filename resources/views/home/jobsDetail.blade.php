@@ -1,6 +1,8 @@
 @extends('welcome')
 @section('title', 'Career')
-@section('page_description', '')
+@section('page_description', 'Marsiajar merupakan sebuah komunitas Mari Siap Mengajar dimana guru-guru di Indonesia
+dapat saling berbagi dan berkolaborasi untuk meningkatkan metode mengajar di dalam dan di luar kelas. Di Marsiajar, anda
+dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan mengembangkan diri.')
 @section('content')
 <div id="download-page" class="page-hero-section division">
     <div class="page-hero-overlay division">

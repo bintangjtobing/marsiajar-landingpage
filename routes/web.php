@@ -23,6 +23,11 @@ Route::get('/facebook', function () {
     return Redirect::to('http://www.facebook.com/');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'webpageController@index');
+
+
+// additional
+Route::get('/terms-conditions', 'additionalController@terms');
+Route::get('/privacy-policy', 'additionalController@privacy');
+// Route::get('/faqs', 'additionalController@faqs');
+// Route::get('/plans', 'additionalController@plans');

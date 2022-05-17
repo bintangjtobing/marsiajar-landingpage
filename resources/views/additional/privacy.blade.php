@@ -1,8 +1,10 @@
 @extends('welcome')
 @section('title', 'Privacy Policy')
-@section('page_description', '')
+@section('page_description', 'Marsiajar merupakan sebuah komunitas Mari Siap Mengajar dimana guru-guru di Indonesia
+dapat saling berbagi dan berkolaborasi untuk meningkatkan metode mengajar di dalam dan di luar kelas. Di Marsiajar, anda
+dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan mengembangkan diri.')
 @section('content')
-<section id="terms-page" class="bg-snow wide-70 inner-page-hero terms-section division">
+<section id="terms-page" class="bg-snow mt-5 wide-70 inner-page-hero terms-section division">
     <div class="container">
 
 

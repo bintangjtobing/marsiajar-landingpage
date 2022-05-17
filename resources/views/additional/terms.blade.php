@@ -1,11 +1,10 @@
 @extends('welcome')
 @section('title', 'Terms & Condition')
-@section('page_description', 'A cloud-based system that helps companies to run their businesses as efficiently as
-possible. We provide a way for you to manage and integrate various activities and operations of anything that your
-business needs such as productions, assets, financial management, and human resources management through a software
-application.')
+@section('page_description', 'Marsiajar merupakan sebuah komunitas Mari Siap Mengajar dimana guru-guru di Indonesia
+dapat saling berbagi dan berkolaborasi untuk meningkatkan metode mengajar di dalam dan di luar kelas. Di Marsiajar, anda
+dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan mengembangkan diri.')
 @section('content')
-<section id="terms-page" class="bg-snow wide-70 inner-page-hero terms-section division">
+<section id="terms-page" class="bg-snow wide-70 mt-5 inner-page-hero terms-section division">
     <div class="container">
 
 
