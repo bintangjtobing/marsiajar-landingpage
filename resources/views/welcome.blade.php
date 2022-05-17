@@ -145,7 +145,7 @@
                         <nav class="primary-menu with-arrows">
 
                             <ul class="menu-container">
-                                <li class="menu-item"><a href="#" class="menu-link">
+                                <li class="menu-item"><a href="/" class="menu-link">
                                         <div><i class="icon-line-home"></i>Home</div>
                                     </a>
                                 </li>
@@ -174,23 +174,23 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
+                                <li class="menu-item"><a href="/news" class="menu-link">
                                         <div><i class="icon-line-info"></i>News</div>
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
+                                <li class="menu-item"><a href="/events" class="menu-link">
                                         <div><i class="icon-line2-camcorder"></i>Events</div>
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
+                                <li class="menu-item"><a href="/gallery" class="menu-link">
                                         <div><i class="icon-line-image"></i>Gallery</div>
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
+                                <li class="menu-item"><a href="/about-us" class="menu-link">
                                         <div><i class="icon-line-briefcase"></i>About Us</div>
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
+                                <li class="menu-item"><a href="/contact-us" class="menu-link">
                                         <div><i class="icon-line-phone"></i>Contact Us</div>
                                     </a>
                                 </li>

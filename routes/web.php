@@ -34,7 +34,14 @@ Route::get('/facebook', function () {
     return Redirect::to('http://www.facebook.com/');
 });
 
+
+// General Menu
 Route::get('/', 'webpageController@index');
+Route::get('/news', 'webpageController@news');
+Route::get('/events', 'webpageController@events');
+Route::get('/gallery', 'webpageController@gallery');
+Route::get('/about-us','webpageController@aboutUs');
+Route::get('/contact-us','webpageController@contactUs');
 
 
 // additional

@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('title', $blogs->title)
 @section('page_description', 'This page is about news stories that are interesting to read, from everything updated from
-Boxity Central Indonesia, from features, fixes, memes and more.')
+Marsiajar, from features, fixes, memes and more.')
 @section('page_keywords', 'blog boxity, boxity, boxityerp, realizeboxity, boxity central
 indonesia, erp boxity, warehouse management, human resources management, financial management, boxity warehouse, boxity
 WMS, boxity financial, boxity indonesia, news from boxity')
