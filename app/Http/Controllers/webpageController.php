@@ -25,10 +25,10 @@ class webpageController extends Controller
     {
         return view('home.index');
     }
-    public function gallery()
-    {
-        return view('home.galleries');
-    }
+    // public function gallery()
+    // {
+    //     return view('home.galleries');
+    // }
     public function aboutUs()
     {
         return view('home.about');
@@ -36,5 +36,21 @@ class webpageController extends Controller
     public function contactUs()
     {
         return view('home.contact');
+    }
+    public function bahanAjar()
+    {
+        return view('home.bahan-ajar');
+    }
+    public function rencanaAjar()
+    {
+        return view('home.rencana-ajar');
+    }
+    public function lembarKerja()
+    {
+        return view('home.lembar-kerja');
+    }
+    public function inspirasi()
+    {
+        return view('home.inspirasi');
     }
 }

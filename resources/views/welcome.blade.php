@@ -157,18 +157,20 @@
                                                 <div><i class="icon-line2-user"></i>Ajar</div>
                                             </a>
                                             <ul class="sub-menu-container">
-                                                <li class="menu-item"><a class="menu-link" href="#">
+                                                <li class="menu-item"><a class="menu-link" href="/educative/bahan-ajar">
                                                         <div>Bahan Ajar</div>
                                                     </a></li>
-                                                <li class="menu-item"><a class="menu-link" href="#">
+                                                <li class="menu-item"><a class="menu-link"
+                                                        href="/educative/rencana-ajar">
                                                         <div>Rencana Ajar</div>
                                                     </a></li>
-                                                <li class="menu-item"><a class="menu-link" href="#">
+                                                <li class="menu-item"><a class="menu-link"
+                                                        href="/educative/lembar-kerja">
                                                         <div>Lembar Kerja</div>
                                                     </a></li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="#">
+                                        <li class="menu-item"><a class="menu-link" href="/educative/inspirasi">
                                                 <div><i class="icon-chart-bar1"></i>Inspirasi</div>
                                             </a>
                                         </li>
@@ -180,10 +182,6 @@
                                 </li>
                                 <li class="menu-item"><a href="/events" class="menu-link">
                                         <div><i class="icon-line2-camcorder"></i>Events</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item"><a href="/gallery" class="menu-link">
-                                        <div><i class="icon-line-image"></i>Gallery</div>
                                     </a>
                                 </li>
                                 <li class="menu-item"><a href="/about-us" class="menu-link">
