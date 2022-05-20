@@ -10,7 +10,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
     data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
 
     <div class="container clearfix">
-        <h1>Rencana Ajar</h1>
+        <h1>Rencana Ajar (RPP)</h1>
         <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>

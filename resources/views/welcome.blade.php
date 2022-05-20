@@ -146,7 +146,7 @@
 
                             <ul class="menu-container">
                                 <li class="menu-item"><a href="/" class="menu-link">
-                                        <div><i class="icon-line-home"></i>Home</div>
+                                        <div><i class="icon-line-home"></i>Beranda</div>
                                     </a>
                                 </li>
                                 <li class="menu-item"><a class="menu-link" href="#" class="ps-0">
@@ -154,7 +154,7 @@
                                     </a>
                                     <ul class="sub-menu-container">
                                         <li class="menu-item"><a class="menu-link" href="#">
-                                                <div><i class="icon-line2-user"></i>Ajar</div>
+                                                <div><i class="icon-line2-user"></i>Cari Bahan Ajar</div>
                                             </a>
                                             <ul class="sub-menu-container">
                                                 <li class="menu-item"><a class="menu-link" href="/educative/bahan-ajar">
@@ -162,7 +162,7 @@
                                                     </a></li>
                                                 <li class="menu-item"><a class="menu-link"
                                                         href="/educative/rencana-ajar">
-                                                        <div>Rencana Ajar</div>
+                                                        <div>Rencana Ajar (RPP)</div>
                                                     </a></li>
                                                 <li class="menu-item"><a class="menu-link"
                                                         href="/educative/lembar-kerja">
@@ -177,7 +177,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item"><a href="/news" class="menu-link">
-                                        <div><i class="icon-line-info"></i>News</div>
+                                        <div><i class="icon-line-info"></i>Berita</div>
                                     </a>
                                 </li>
                                 <li class="menu-item"><a href="/events" class="menu-link">
@@ -185,11 +185,11 @@
                                     </a>
                                 </li>
                                 <li class="menu-item"><a href="/about-us" class="menu-link">
-                                        <div><i class="icon-line-briefcase"></i>About Us</div>
+                                        <div><i class="icon-line-briefcase"></i>Tentang kami</div>
                                     </a>
                                 </li>
                                 <li class="menu-item"><a href="/contact-us" class="menu-link">
-                                        <div><i class="icon-line-phone"></i>Contact Us</div>
+                                        <div><i class="icon-line-phone"></i>Hubungi Kami</div>
                                     </a>
                                 </li>
                             </ul>

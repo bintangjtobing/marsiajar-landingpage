@@ -16,11 +16,13 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                     <div class="col-md-8">
                         <div class="slider-title mb-5 dark clearfix">
                             <h2 class="text-white text-rotater mb-2" data-separator="," data-rotate="fadeIn"
-                                data-speed="3500">Welcome to marsiajar <br> here we can share about <span
-                                    class="t-rotate text-white d-inline-block">Teaching Materials, Inspiration
-                                    Materials, Teaching Planning Materials, Work Paper</span>.</h2>
-                            <p class="lead mb-0 text-uppercase ls2" style="color: #CCC; font-size: 110%">The
-                                platform to connecting all of educators</p>
+                                data-speed="3500">Selamat datang di Marsiajar.</h2>
+                            <p class="lead mb-0 text-uppercase ls2" style="color: #CCC; font-size: 110%">Mari
+                                berkolaborasi dengan pendidik lainnya.</p>
+                            <hr>
+                            <span>Marsiajar adalah platform bagi para pendidik untuk saling berkolaborasi, serta
+                                memberi kesempatan kepada pendidik creator untuk mendapatkan penghasilan tambahan
+                                dari bahan ajar yang mereka buat.</span>
                         </div>
                     </div>
                 </div>
@@ -30,9 +32,9 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
         <!-- HTML5 Video Wrap
 				============================================= -->
         <div class="video-wrap">
-            <video id="slide-video" poster="{!!asset('webpage/demos/course/images/video/poster.jpg')!!}" preload=" auto"
-                loop autoplay muted>
-                <source src='{!!asset('webpage/demos/course/images/video/1.mp4')!!}' type='video/mp4' />
+            <video id="slide-video" poster="{!!asset('webpage/demos/marsiajar/poster-1.jpg')!!}" preload=" auto" loop
+                autoplay muted>
+                <source src='{!!asset(' webpage/demos/course/images/video/123.mp4')!!}' type='video/mp4' />
             </video>
             <div class="video-overlay" style="background: rgba(0,0,0,0.65); z-index: 1"></div>
         </div>
@@ -54,7 +56,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
         <div class="container">
 
             <div class="heading-block border-bottom-0 my-4 center">
-                <h3>Popular teaching materials categories</h3>
+                <h3>Temukan bahan ajar yang anda butuhkan</h3>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus mollitia ipsum.
                     Voluptatibus, perspiciatis placeat.</span>
             </div>
@@ -217,9 +219,8 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
             <div class="container">
 
                 <div class="heading-block border-bottom-0 mb-5 center">
-                    <h3>Most Popular Teaching Materials</h3>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus mollitia ipsum.
-                        Voluptatibus, perspiciatis placeat.</span>
+                    <h3>Bahan ajar terpopuler</h3>
+                    <span>Bahan ajar dan inspirasi yang paling banyak dicari.</span>
                 </div>
 
                 <div class="clear"></div>
@@ -425,7 +426,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
             <div class="container">
 
                 <div class="heading-block border-bottom-0 mb-5 center">
-                    <h3>The best teaching material teacher</h3>
+                    <h3>Pendidik creator terpopuler</h3>
                     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus mollitia ipsum.
                         Voluptatibus, perspiciatis placeat.</span>
                 </div>
@@ -527,15 +528,14 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 
                     <div class="col-md-5">
                         <div class="heading-block border-bottom-0 mt-5">
-                            <h3>Become a teacher that happy to share a <span>teaching materials</span> to others
-                                <span>educators</span>
+                            <h3>Jadilah <span>pendidik creator</span> dan dapatkan penghasilan <span>tambahan</span>
+                                dengan
+                                mudah</span>
                             </h3>
-                            <span>Teach, and share What You Love.</span>
+                            {{-- <span>Teach, and share What You Love.</span> --}}
                         </div>
-                        <p class="mb-2">Monotonectally conceptualize covalent strategic theme areas and
-                            cross-unit deliverables.</p>
-                        <p>Consectetur adipisicing elit. Voluptate incidunt dolorum perferendis accusamus
-                            nesciunt et est consequuntur placeat, dolor quia.</p>
+                        <p class="mb-2">Anda berkesempatan untuk mendapatkan penghasilan tambahan dari bahan ajar dan
+                            artikel yang anda buat. Mulai berbagi.</p>
                         <a href="#" class="button button-rounded button-xlarge ls0 ls0 nott fw-normal m-0">Start
                             Sharing</a>
                     </div>
