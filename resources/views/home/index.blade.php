@@ -231,11 +231,12 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 							============================================= -->
                     <div class="col-md-4 mb-5">
                         <div class="card course-card hover-effect border-0">
-                            <a href="#"><img class="card-img-top"
+                            <a href="/educative/detail"><img class="card-img-top"
                                     src="{!!asset('webpage/demos/course/images/courses/1.jpg')!!}"
                                     alt=" Card image cap"></a>
                             <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="#">Rincian Minggu Efektif Tematik
+                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Rincian Minggu Efektif
+                                        Tematik
                                         Terpadu K13 Edisi Revisi Semester Ganjil</a></h4>
                                 <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
                                         class="text-black-50">Tematik</a></p>
@@ -262,11 +263,12 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 							============================================= -->
                     <div class="col-md-4 mb-5">
                         <div class="card course-card hover-effect border-0">
-                            <a href="#"><img class="card-img-top"
+                            <a href="/educative/detail"><img class="card-img-top"
                                     src="{!!asset('webpage/demos/course/images/courses/2.jpg')!!}"
                                     alt=" Card image cap"></a>
                             <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="#">Silabus Pembelajaran Kurikulum
+                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Silabus Pembelajaran
+                                        Kurikulum
                                         2013 Edisi Revisi Kelas 1</a></h4>
                                 <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
                                         class="text-black-50">Silabus</a></p>
@@ -292,11 +294,12 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 							============================================= -->
                     <div class="col-md-4 mb-5">
                         <div class="card course-card hover-effect border-0">
-                            <a href="#"><img class="card-img-top"
+                            <a href="/educative/detail"><img class="card-img-top"
                                     src="{!!asset('webpage/demos/course/images/courses/3.jpg')!!}"
                                     alt=" Card image cap"></a>
                             <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="#">RPP Tematik Terpadu Kurikulum
+                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">RPP Tematik Terpadu
+                                        Kurikulum
                                         2013 Revisi 2017 kelas 1 Tema 1 Sub Tema 1</a></h4>
                                 <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
                                         class="text-black-50">Tematik</a></p>
@@ -323,11 +326,12 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 							============================================= -->
                     <div class="col-md-4 mb-5">
                         <div class="card course-card hover-effect border-0">
-                            <a href="#"><img class="card-img-top"
+                            <a href="/educative/detail"><img class="card-img-top"
                                     src="{!!asset('webpage/demos/course/images/courses/4.jpg')!!}"
                                     alt=" Card image cap"></a>
                             <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="#">Aktivitas : Planet Dalam Tata
+                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Aktivitas : Planet Dalam
+                                        Tata
                                         Surya</a></h4>
                                 <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
                                         class="text-black-50">Sains</a></p>
@@ -354,11 +358,12 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 							============================================= -->
                     <div class="col-md-4 mb-5">
                         <div class="card course-card hover-effect border-0">
-                            <a href="#"><img class="card-img-top"
+                            <a href="/educative/detail"><img class="card-img-top"
                                     src="{!!asset('webpage/demos/course/images/courses/5.jpg')!!}"
                                     alt=" Card image cap"></a>
                             <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="#">Program Semester K13 Edisi
+                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Program Semester K13
+                                        Edisi
                                         Revisi Kelas 4 SD</a></h4>
                                 <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
                                         class="text-black-50">Semester</a></p>
@@ -384,11 +389,12 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 							============================================= -->
                     <div class="col-md-4 mb-5">
                         <div class="card course-card hover-effect border-0">
-                            <a href="#"><img class="card-img-top"
+                            <a href="/educative/detail"><img class="card-img-top"
                                     src="{!!asset('webpage/demos/course/images/courses/6.jpg')!!}"
                                     alt=" Card image cap"></a>
                             <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="#">Memahami dan mengelompokkan
+                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Memahami dan
+                                        mengelompokkan
                                         usulan dasar negara (Pancasila)</a></h4>
                                 <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
                                         class="text-black-50">PPKN</a></p>

@@ -53,4 +53,8 @@ class webpageController extends Controller
     {
         return view('home.inspirasi');
     }
+    public function detailAjar()
+    {
+        return view('home.detail-ajar');
+    }
 }

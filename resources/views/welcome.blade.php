@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{!!asset('webpage/demos/course/css/fonts.css')!!}" type="text/css" />
     <link rel="stylesheet" href="{!!asset('webpage/demos/course/course.css')!!}" type="text/css" />
     <link rel="shortcut icon" href="{!!asset('webpage/demos/marsiajar/logo.ico')!!}" type="image/x-icon">
+    <link rel="stylesheet" href="{!!asset('webpage/css/components/bs-rating.css')!!}" type="text/css" />
     <script src="https://kit.fontawesome.com/98c197c895.js" crossorigin="anonymous"></script>
 
     <!-- Document Description
@@ -316,12 +317,98 @@
 	============================================= -->
     <script src="{!!asset('webpage/js/jquery.js')!!}"></script>
     <script src="{!!asset('webpage/js/plugins.min.js')!!}"></script>
-
+    <!-- Star Rating Plugin -->
+    <script src="{!!asset('webpage/js/components/star-rating.js')!!}"></script>
 
     <!-- Footer Scripts
 	============================================= -->
     <script src="{!!asset('webpage/js/functions.js')!!}"></script>
+    <script>
+        $("#input-7").rating({
+            containerClass: 'is-heart',
+            filledStar: '<i class="icon-heart3"></i>',
+            emptyStar: '<i class="icon-heart-empty"></i>',
+            starCaptions: {
+                0: "Not Rated",
+                1: "Very Poor",
+                2: "Poor",
+                3: "Ok",
+                4: "Good",
+                5: "Very Good"
+            },
+            starCaptionClasses: {
+                0: "text-danger",
+                1: "text-danger",
+                2: "text-warning",
+                3: "text-info",
+                4: "text-primary",
+                5: "text-success"
+            },
+        });
 
+        $("#input-8").rating({
+            containerClass: '',
+            filledStar: '<i class="icon-flag21"></i>',
+            emptyStar: '<i class="icon-flag-alt"></i>',
+            starCaptions: {
+                0: "Not Rated",
+                1: "1 Flags",
+                2: "2 Flags",
+                3: "3 Flags",
+                4: "4 Flags",
+                5: "5 Flags"
+            },
+            starCaptionClasses: {
+                0: "text-danger",
+                1: "text-danger",
+                2: "text-warning",
+                3: "text-info",
+                4: "text-primary",
+                5: "text-success"
+            },
+        });
+
+        $("#input-11").rating({
+            starCaptions: {
+                0: "Not Rated",
+                1: "Very Poor",
+                2: "Poor",
+                3: "Ok",
+                4: "Good",
+                5: "Very Good"
+            },
+            starCaptionClasses: {
+                0: "text-danger",
+                1: "text-danger",
+                2: "text-warning",
+                3: "text-info",
+                4: "text-primary",
+                5: "text-success"
+            },
+        });
+
+        $("#input-13").on("rating.clear", function (event) {
+            $('#rating-notification-message').attr('data-notify-type', 'error').attr('data-notify-msg',
+                'Your rating is reset');
+            SEMICOLON.widget.notifications({
+                el: jQuery('#rating-notification-message')
+            });
+        });
+        $("#input-13").on("rating.change", function (event, value, caption) {
+            $('#rating-notification-message').attr('data-notify-msg', 'You rated: ' + value + ' Stars');
+            SEMICOLON.widget.notifications({
+                el: jQuery('#rating-notification-message')
+            });
+        });
+
+        $("#input-14").on("rating.change", function (event, value, caption) {
+            $("#input-14").rating("refresh", {
+                disabled: true,
+                showClear: false
+            });
+        });
+
+    </script>
 </body>
 
 </html>
