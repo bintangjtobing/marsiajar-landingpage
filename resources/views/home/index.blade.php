@@ -21,7 +21,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                 berkolaborasi dengan pendidik lainnya.</p>
                             <hr>
                             <span>Marsiajar adalah platform bagi para pendidik untuk saling berkolaborasi, serta
-                                memberi kesempatan kepada pendidik creator untuk mendapatkan penghasilan tambahan
+                                memberi kesempatan kepada pendidik Kreator untuk mendapatkan penghasilan tambahan
                                 dari bahan ajar yang mereka buat.</span>
                         </div>
                     </div>
@@ -432,7 +432,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
             <div class="container">
 
                 <div class="heading-block border-bottom-0 mb-5 center">
-                    <h3>Pendidik creator terpopuler</h3>
+                    <h3>Pendidik Kreator terpopuler</h3>
                     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus mollitia ipsum.
                         Voluptatibus, perspiciatis placeat.</span>
                 </div>
@@ -455,7 +455,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                 <h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Dylan
                                         Abal</a><br><small class="subtitle nott color">Guru SDN 001122</small>
                                 </h3>
-                                <p class="text-dark"><strong>2342</strong> Students</p>
+                                <p class="text-dark">⭐⭐⭐⭐⭐</p>
                                 <p class="text-dark mt-0"><strong>23</strong> Teaching Materials</p>
                             </div>
                         </div>
@@ -475,7 +475,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                 <h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Alan
                                         Francis</a><br><small class="subtitle nott color">Development IT,
                                         Guru</small></h3>
-                                <p class="text-dark"><strong>7563</strong> Students</p>
+                                <p class="text-dark">⭐⭐⭐⭐</p>
                                 <p class="text-dark mt-0"><strong>29</strong> Teaching Materials</p>
                             </div>
                         </div>
@@ -494,7 +494,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                             <div class="fbox-content">
                                 <h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Herry
                                         Tander</a><br><small class="subtitle nott color">TIK Master</small></h3>
-                                <p class="text-dark"><strong>1131</strong> Students</p>
+                                <p class="text-dark">⭐⭐⭐⭐</p>
                                 <p class="text-dark mt-0"><strong>11</strong> Teaching Materials</p>
                             </div>
                         </div>
@@ -514,7 +514,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                 <h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Desmond
                                         Cato</a><br><small class="subtitle nott color">Sistem Analisis
                                         Master</small></h3>
-                                <p class="text-dark"><strong>1232</strong> Students</p>
+                                <p class="text-dark">⭐⭐⭐⭐</p>
                                 <p class="text-dark mt-0"><strong>12</strong> Teaching Materials</p>
                             </div>
                         </div>
@@ -534,9 +534,10 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 
                     <div class="col-md-5">
                         <div class="heading-block border-bottom-0 mt-5">
-                            <h3>Jadilah <span>pendidik creator</span> dan dapatkan penghasilan <span>tambahan</span>
+                            <h3>Jadilah <span>pendidik Kreator</span> dan dapatkan <span>penghasilan</span>
+                                tambahan
                                 dengan
-                                mudah</span>
+                                <span>mudah</span>
                             </h3>
                             {{-- <span>Teach, and share What You Love.</span> --}}
                         </div>

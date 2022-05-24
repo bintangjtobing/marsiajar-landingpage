@@ -19,11 +19,11 @@ class webpageController extends Controller
     public function news()
     {
         $blog = blog::orderBy('created_at', 'desc')->where('status', 1)->with('user', 'image')->paginate(9);
-        return view('home.blog', ['blogs' => $blog]);
+        return view('home.blog-2', ['blogs' => $blog]);
     }
     public function events()
     {
-        return view('home.index');
+        return view('home.events');
     }
     // public function gallery()
     // {

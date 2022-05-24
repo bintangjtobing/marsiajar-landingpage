@@ -151,25 +151,20 @@
                                     </a>
                                 </li>
                                 <li class="menu-item"><a class="menu-link" href="#" class="ps-0">
-                                        <div><i class="icon-line-grid"></i>Educative</div>
+                                        <div><i class="icon-line-grid"></i>Cari Bahan Ajar</div>
                                     </a>
                                     <ul class="sub-menu-container">
-                                        <li class="menu-item"><a class="menu-link" href="#">
-                                                <div><i class="icon-line2-user"></i>Cari Bahan Ajar</div>
+                                        <li class="menu-item"><a class="menu-link" href="/educative/bahan-ajar">
+                                                <div><i class="icon-chart-bar1"></i>Bahan Ajar</div>
                                             </a>
-                                            <ul class="sub-menu-container">
-                                                <li class="menu-item"><a class="menu-link" href="/educative/bahan-ajar">
-                                                        <div>Bahan Ajar</div>
-                                                    </a></li>
-                                                <li class="menu-item"><a class="menu-link"
-                                                        href="/educative/rencana-ajar">
-                                                        <div>Rencana Ajar (RPP)</div>
-                                                    </a></li>
-                                                <li class="menu-item"><a class="menu-link"
-                                                        href="/educative/lembar-kerja">
-                                                        <div>Lembar Kerja</div>
-                                                    </a></li>
-                                            </ul>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="/educative/rencana-ajar">
+                                                <div><i class="icon-chart-bar1"></i>Rencana Ajar (RPP)</div>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item"><a class="menu-link" href="/educative/lembar-kerja">
+                                                <div><i class="icon-chart-bar1"></i>Lembar Kerja</div>
+                                            </a>
                                         </li>
                                         <li class="menu-item"><a class="menu-link" href="/educative/inspirasi">
                                                 <div><i class="icon-chart-bar1"></i>Inspirasi</div>
@@ -235,7 +230,7 @@
                             <a href="#"><i class="icon-line2-envelope me-2"></i>info@marsiajar.com</a>
                         </div>
                         <div class="col-6 col-md-3">
-                            <h4 class="text-uppercase ls2 fw-normal">Best Teaching Materials</h4>
+                            <h4 class="text-uppercase ls2 fw-normal">Bahan ajar terpopuler</h4>
                             <ul class="list-unstyled mb-0">
                                 <li>
                                     <h5 class="mb-0"><a href="#" class="text-white">Cooking Classes</a></h5>
