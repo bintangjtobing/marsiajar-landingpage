@@ -25,141 +25,39 @@ WMS, boxity financial, boxity indonesia, news from boxity')
 							============================================= -->
                     <div id="posts" class="row grid-container gutter-40">
 
+                        @foreach ($blogs as $blogs)
                         <div class="entry col-12">
                             <div class="grid-inner row g-0">
                                 <div class="col-md-4">
-                                    <a class="entry-image" href="{!!asset('webpage/images/blog/full/17.jpg')!!}"
-                                        data-lightbox="image"><img src="{!!asset('webpage/images/blog/small/17.jpg')!!}"
-                                            alt="Standard Post with Image"></a>
+                                    <a class="entry-image" href="{{$blogs->image->file}}" data-lightbox="image"><img
+                                            src="{{$blogs->image->file}}" alt="{{$blogs->title}}"></a>
                                 </div>
                                 <div class="col-md-8 ps-md-4">
                                     <div class="entry-title title-sm">
-                                        <h2><a href="blog-single.html">This is a Standard post with a Preview Image</a>
+                                        <h2><a href="blog-single.html">{{$blogs->title}}</a>
                                         </h2>
                                     </div>
                                     <div class="entry-meta">
                                         <ul>
-                                            <li><i class="icon-calendar3"></i> 10th Feb 2021</li>
-                                            <li><a href="#"><i class="icon-user"></i> admin</a></li>
-                                            <li><i class="icon-folder-open"></i> <a href="#">General</a>, <a
-                                                    href="#">Media</a></li>
+                                            <li><i class="icon-calendar3"></i> {{$blogs->created_at}}</li>
+                                            <li><a href="#"><i class="icon-user"></i> {{$blogs->user->name}}</a></li>
+                                            <li><i class="icon-folder-open"></i> <a
+                                                    href="#">{{$blogs->categories->categories_name ?? ''}}</a>, <a
+                                                    href="#">{{$blogs->subcategories->sub_categories_name ?? ''}}</a>
+                                            </li>
                                             <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a>
                                             </li>
                                             <li><a href="#"><i class="icon-camera-retro"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="entry-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate,
-                                            asperiores quod est tenetur in. Eligendi, deserunt, blanditiis est quisquam
-                                            doloribus voluptate id aperiam ea ipsum magni aut perspiciatis rem
-                                            voluptatibus officia eos rerum deleniti quae nihil facilis repellat atque
-                                            vitae voluptatem libero at eveniet veritatis ab facere.</p>
-                                        <a href="blog-single.html" class="more-link">Read More</a>
+                                        {!!Str::limit($blogs->description, 100)!!}
+                                        <a href="#" class="more-link">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="entry col-12">
-                            <div class="grid-inner row g-0">
-                                <div class="col-md-4">
-                                    <a class="entry-image" href="{!!asset('webpage/images/blog/full/17.jpg')!!}"
-                                        data-lightbox="image"><img src="{!!asset('webpage/images/blog/small/17.jpg')!!}"
-                                            alt="Standard Post with Image"></a>
-                                </div>
-                                <div class="col-md-8 ps-md-4">
-                                    <div class="entry-title title-sm">
-                                        <h2><a href="blog-single-full.html">This is a Standard post with an Embedded
-                                                Video</a></h2>
-                                    </div>
-                                    <div class="entry-meta">
-                                        <ul>
-                                            <li><i class="icon-calendar3"></i> 16th Feb 2021</li>
-                                            <li><a href="#"><i class="icon-user"></i> admin</a></li>
-                                            <li><i class="icon-folder-open"></i> <a href="#">Videos</a>, <a
-                                                    href="#">News</a></li>
-                                            <li><a href="blog-single-full.html#comments"><i class="icon-comments"></i>
-                                                    19</a></li>
-                                            <li><a href="#"><i class="icon-film"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="entry-content">
-                                        <p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur
-                                            quibusdam veritatis quisquam laboriosam esse beatae hic perferendis velit
-                                            deserunt soluta iste repellendus officia in neque veniam debitis placeat quo
-                                            unde reprehenderit eum facilis vitae.</p>
-                                        <a href="blog-single-full.html" class="more-link">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="entry col-12">
-                            <div class="grid-inner row g-0">
-                                <div class="col-md-4">
-                                    <a class="entry-image" href="{!!asset('webpage/images/blog/full/17.jpg')!!}"
-                                        data-lightbox="image"><img src="{!!asset('webpage/images/blog/small/17.jpg')!!}"
-                                            alt="Standard Post with Image"></a>
-                                </div>
-                                <div class="col-md-8 ps-md-4">
-                                    <div class="entry-title title-sm">
-                                        <h2><a href="blog-single-small.html">This is a Standard post with a Slider
-                                                Gallery</a></h2>
-                                    </div>
-                                    <div class="entry-meta">
-                                        <ul>
-                                            <li><i class="icon-calendar3"></i> 24th Feb 2021</li>
-                                            <li><a href="#"><i class="icon-user"></i> admin</a></li>
-                                            <li><i class="icon-folder-open"></i> <a href="#">Gallery</a>, <a
-                                                    href="#">Media</a></li>
-                                            <li><a href="blog-single-small.html#comments"><i class="icon-comments"></i>
-                                                    21</a></li>
-                                            <li><a href="#"><i class="icon-picture"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="entry-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
-                                            voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et
-                                            explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem
-                                            eligendi fuga. Maiores, sunt eveniet doloremque porro hic exercitationem
-                                            distinctio sequi adipisci.</p>
-                                        <a href="blog-single-small.html" class="more-link">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="entry col-12">
-                            <div class="grid-inner row g-0">
-                                <div class="col-md-4">
-                                    <a class="entry-image" href="{!!asset('webpage/images/blog/full/17.jpg')!!}"
-                                        data-lightbox="image"><img src="{!!asset('webpage/images/blog/small/17.jpg')!!}"
-                                            alt="Standard Post with Image"></a>
-                                </div>
-                                <div class="col-md-8 ps-md-4">
-                                    <div class="entry-title title-sm">
-                                        <h2><a href="blog-single.html">This is an Embedded Audio Post</a></h2>
-                                    </div>
-                                    <div class="entry-meta">
-                                        <ul>
-                                            <li><i class="icon-calendar3"></i> 28th Apr 2021</li>
-                                            <li><a href="#"><i class="icon-user"></i> admin</a></li>
-                                            <li><i class="icon-folder-open"></i> <a href="#">Audio</a>, <a
-                                                    href="#">General</a></li>
-                                            <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 16</a>
-                                            </li>
-                                            <li><a href="#"><i class="icon-music2"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="entry-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
-                                            voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et
-                                            explicabo tenetur voluptate rerum molestiae eaque possimus exercitationem
-                                            eligendi fuga.</p>
-                                        <a href="blog-single.html" class="more-link">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
 
                     </div><!-- #posts end -->
 

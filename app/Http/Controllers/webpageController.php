@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\blog;
+use App\subCategories;
+use App\categories;
+use App\blogFiles;
 use App\blogImages;
+use App\subCategoriesImages;
+use App\categoriesImages;
 use App\album_photos;
 use App\albums;
 use Illuminate\Support\Facades\DB;
@@ -14,12 +19,18 @@ class webpageController extends Controller
 {
     public function index()
     {
-        return view('home.index');
+        $sub = subCategories::with('image')->get();
+        $article = blog::with('user', 'image', 'subcategories', 'categories')->orderBy('created_at', 'DESC')->limit(6)->get();
+        return view('home.index', ['sub' => $sub, 'article' => $article]);
+        // return response()->json($article);
+        // dd($article);
+        // return 200;
     }
     public function news()
     {
-        $blog = blog::orderBy('created_at', 'desc')->where('status', 1)->with('user', 'image')->paginate(9);
-        return view('home.blog-2', ['blogs' => $blog]);
+        $blogs = blog::orderBy('created_at', 'desc')->where('status', 1)->with('user', 'image', 'categories', 'subcategories', 'file')->get();
+        return view('home.blog-2', ['blogs' => $blogs]);
+        // return response()->json($blogs);
     }
     public function events()
     {

@@ -140,11 +140,13 @@
                                 </path>
                             </svg>
                         </div>
-
+                        @php
+                        $getCategories = DB::table('categories')->orderBy('created_at',
+                        'DESC')->where('categories_name', '!=', 'Umum')->get();
+                        @endphp
                         <!-- Primary Navigation
 						============================================= -->
                         <nav class="primary-menu with-arrows">
-
                             <ul class="menu-container">
                                 <li class="menu-item"><a href="/" class="menu-link">
                                         <div><i class="icon-line-home"></i>Beranda</div>
@@ -154,22 +156,13 @@
                                         <div><i class="icon-line-grid"></i>Cari Bahan Ajar</div>
                                     </a>
                                     <ul class="sub-menu-container">
-                                        <li class="menu-item"><a class="menu-link" href="/educative/bahan-ajar">
-                                                <div><i class="icon-chart-bar1"></i>Bahan Ajar</div>
+                                        @foreach ($getCategories as $item)
+                                        <li class="menu-item"><a class="menu-link" href="/educative/{{$item->slug}}">
+                                                <div><i class="icon-chart-bar1"></i>{{$item->categories_name}}
+                                                </div>
                                             </a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link" href="/educative/rencana-ajar">
-                                                <div><i class="icon-chart-bar1"></i>Rencana Ajar (RPP)</div>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item"><a class="menu-link" href="/educative/lembar-kerja">
-                                                <div><i class="icon-chart-bar1"></i>Lembar Kerja</div>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item"><a class="menu-link" href="/educative/inspirasi">
-                                                <div><i class="icon-chart-bar1"></i>Inspirasi</div>
-                                            </a>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li class="menu-item"><a href="/news" class="menu-link">

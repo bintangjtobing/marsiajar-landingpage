@@ -64,140 +64,18 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
             <!-- Categories
 					============================================= -->
             <div class="row course-categories clearfix mb-4">
+                @foreach ($sub as $subs)
                 <div class="col-lg-2 col-sm-3 col-6 mt-4">
                     <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/music.jpg')!!}" alt=" Card
+                        <img class="card-img" src="{{$subs->image->file}}" alt="Card
                                     image">
                         <a href="#" class="card-img-overlay rounded p-0"
                             style="background-color: rgba(251,51,100,0.8);">
-                            <span><i class="icon-music1"></i>Musik</span>
+                            <span>{{$subs->sub_categories_name}}</span>
                         </a>
                     </div>
                 </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img"
-                            src="{!!asset('webpage/demos/course/images/categories/development.jpg')!!}""
-                                    alt=" Card image">
-                        <a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(29,74,103,0.8);">
-                            <span><i class="icon-code1"></i>IT</span>
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/teacher.jpg')!!}"
-                            alt=" Card
-                                    image">
-                        <a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(50,71,66,0.8);">
-                            <span><i class="far fa-flask-vial"></i>Sains</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/food.jpg')!!}" alt=" Card
-                                    image">
-                        <a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(70,58,69,0.8);">
-                            <span><i class="far fa-abacus"></i> Tematik</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/business.jpg')!!}""
-                                    alt=" Card image">
-                        <a href="#" class="card-img-overlay rounded p-0"
-                            style="background-color: rgba(252,108,52,0.8);">
-                            <span><i class="far fa-map"></i> Geografi</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/health.jpg')!!}"
-                            alt=" Card
-                                    image">
-                        <a href="#" class="card-img-overlay rounded p-0"
-                            style="background-color: rgba(158,108,87,0.8);">
-                            <span><i class="far fa-briefcase-medical"></i> Kesehatan Olahraga</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/lifestyle.jpg')!!}""
-                                    alt=" Card image">
-                        <a href="#" class="card-img-overlay rounded p-0"
-                            style="background-color: rgba(164,108,119,0.85);">
-                            <span><i class="icon-line2-game-controller"></i>Gaya Hidup</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/language.jpg')!!}""
-                                    alt=" Card image">
-                        <a href="#" class="card-img-overlay rounded p-0"
-                            style="background-color: rgba(80,167,159,0.8);">
-                            <span><i class="icon-line2-globe"></i>Bahasa</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/paint.jpg')!!}" alt=" Card
-                                    image">
-                        <a href="#" class="card-img-overlay rounded p-0"
-                            style="background-color: rgba(23,116,234,0.8);">
-                            <span><i class="icon-paint-brush"></i>Karya Seni</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img"
-                            src="{!!asset('webpage/demos/course/images/categories/photography.jpg')!!}""
-                                    alt=" Card image">
-                        <a href="#" class="card-img-overlay rounded p-0"
-                            style="background-color: rgba(108,156,148,0.85);">
-                            <span><i class="icon-line2-camera"></i>Fotografi</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/marketing.jpg')!!}""
-                                    alt=" Card image">
-                        <a href="#" class="card-img-overlay rounded p-0"
-                            style="background-color: rgba(227,141,66,0.8);">
-                            <span><i class="icon-line-share"></i>Pasar Digital</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-3 col-6 mt-4">
-                    <div class="card hover-effect">
-                        <img class="card-img" src="{!!asset('webpage/demos/course/images/categories/academics.jpg')!!}""
-                                    alt=" Card image">
-                        <a href="#" class="card-img-overlay rounded p-0"
-                            style="background-color: rgba(39,103,240,0.8);">
-                            <span><i class="icon-line-book"></i>Akademi</span>
-                        </a>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
 
             <div class="clear"></div>
@@ -229,193 +107,35 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 
                     <!-- Course 1
 							============================================= -->
+                    @foreach ($article as $item)
                     <div class="col-md-4 mb-5">
                         <div class="card course-card hover-effect border-0">
-                            <a href="/educative/detail"><img class="card-img-top"
-                                    src="{!!asset('webpage/demos/course/images/courses/1.jpg')!!}"
-                                    alt=" Card image cap"></a>
+                            <a href="/educative/read/{{$item->slug}}"><img class="card-img-top"
+                                    src="{{$item->image->file}}" alt=" Card image cap"></a>
                             <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Rincian Minggu Efektif
-                                        Tematik
-                                        Terpadu K13 Edisi Revisi Semester Ganjil</a></h4>
+                                <h4 class="card-title fw-bold mb-2"><a
+                                        href="/educative/read/{{$item->slug}}">{{$item->title}}</a></h4>
                                 <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
-                                        class="text-black-50">Tematik</a></p>
+                                        class="text-black-50">{{$item->subcategories['sub_categories_name']}}</a>
+                                </p>
                                 <div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i
                                         class="icon-star3"></i><i class="icon-star3"></i><i
                                         class="icon-star-half-full"></i>
                                     <span>4.7</span></div>
-                                <p class="card-text text-black-50 mb-1">Some quick example text to build on the
-                                    card title and make up the bulk of the card's content.</p>
+                                <p class="card-text text-black-50 mb-1">{{Str::limit($item->description, 60)}}</p>
                             </div>
                             <div
                                 class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                 <div class="badge alert-success">Free</div>
                                 <a href="#" class="text-dark position-relative">
                                     <i class="far fa-eye"></i>
-                                    <sup>1,190</sup>
+                                    <sup>{{$item->views}}</sup>
                                     <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
                                     <sup>250</sup></a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Course 2
-							============================================= -->
-                    <div class="col-md-4 mb-5">
-                        <div class="card course-card hover-effect border-0">
-                            <a href="/educative/detail"><img class="card-img-top"
-                                    src="{!!asset('webpage/demos/course/images/courses/2.jpg')!!}"
-                                    alt=" Card image cap"></a>
-                            <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Silabus Pembelajaran
-                                        Kurikulum
-                                        2013 Edisi Revisi Kelas 1</a></h4>
-                                <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
-                                        class="text-black-50">Silabus</a></p>
-                                <div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i
-                                        class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i>
-                                    <span>4.9</span></div>
-                                <p class="card-text text-black-50 mb-1">Some quick example text to build on the
-                                    card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div
-                                class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
-                                <div class="badge alert-success">Free</div>
-                                <a href="#" class="text-dark position-relative">
-                                    <i class="far fa-eye"></i>
-                                    <sup>1,134</sup>
-                                    <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
-                                    <sup>115</sup></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Course 3
-							============================================= -->
-                    <div class="col-md-4 mb-5">
-                        <div class="card course-card hover-effect border-0">
-                            <a href="/educative/detail"><img class="card-img-top"
-                                    src="{!!asset('webpage/demos/course/images/courses/3.jpg')!!}"
-                                    alt=" Card image cap"></a>
-                            <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">RPP Tematik Terpadu
-                                        Kurikulum
-                                        2013 Revisi 2017 kelas 1 Tema 1 Sub Tema 1</a></h4>
-                                <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
-                                        class="text-black-50">Tematik</a></p>
-                                <div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i
-                                        class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half"></i>
-                                    <span>4.4</span>
-                                </div>
-                                <p class="card-text text-black-50 mb-1">Some quick example text to build on the
-                                    card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div
-                                class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
-                                <div class="badge alert-success">Free</div>
-                                <a href="#" class="text-dark position-relative">
-                                    <i class="far fa-eye"></i>
-                                    <sup>987</sup>
-                                    <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
-                                    <sup>99</sup></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Course 4
-							============================================= -->
-                    <div class="col-md-4 mb-5">
-                        <div class="card course-card hover-effect border-0">
-                            <a href="/educative/detail"><img class="card-img-top"
-                                    src="{!!asset('webpage/demos/course/images/courses/4.jpg')!!}"
-                                    alt=" Card image cap"></a>
-                            <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Aktivitas : Planet Dalam
-                                        Tata
-                                        Surya</a></h4>
-                                <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
-                                        class="text-black-50">Sains</a></p>
-                                <div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i
-                                        class="icon-star3"></i><i class="icon-star-half"></i><i
-                                        class="icon-star-empty"></i>
-                                    <span>3.7</span></div>
-                                <p class="card-text text-black-50 mb-1">Some quick example text to build on the
-                                    card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div
-                                class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
-                                <div class="badge alert-primary">210K</div>
-                                <a href="#" class="text-dark position-relative">
-                                    <i class="far fa-eye"></i>
-                                    <sup>769</sup>
-                                    <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
-                                    <sup>56</sup></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Course 5
-							============================================= -->
-                    <div class="col-md-4 mb-5">
-                        <div class="card course-card hover-effect border-0">
-                            <a href="/educative/detail"><img class="card-img-top"
-                                    src="{!!asset('webpage/demos/course/images/courses/5.jpg')!!}"
-                                    alt=" Card image cap"></a>
-                            <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Program Semester K13
-                                        Edisi
-                                        Revisi Kelas 4 SD</a></h4>
-                                <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
-                                        class="text-black-50">Semester</a></p>
-                                <div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i
-                                        class="icon-star3"></i><i class="icon-star3"></i><i class="icon-empty"></i>
-                                    <span>4.1</span></div>
-                                <p class="card-text text-black-50 mb-1">Some quick example text to build on the
-                                    card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div
-                                class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
-                                <div class="badge alert-primary">600K</div>
-                                <a href="#" class="text-dark position-relative">
-                                    <i class="far fa-eye"></i>
-                                    <sup>533</sup>
-                                    <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
-                                    <sup>44</sup></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Course 6
-							============================================= -->
-                    <div class="col-md-4 mb-5">
-                        <div class="card course-card hover-effect border-0">
-                            <a href="/educative/detail"><img class="card-img-top"
-                                    src="{!!asset('webpage/demos/course/images/courses/6.jpg')!!}"
-                                    alt=" Card image cap"></a>
-                            <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a href="/educative/detail">Memahami dan
-                                        mengelompokkan
-                                        usulan dasar negara (Pancasila)</a></h4>
-                                <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
-                                        class="text-black-50">PPKN</a></p>
-                                <div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i
-                                        class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half"></i>
-                                    <span>4.4</span>
-                                </div>
-                                <p class="card-text text-black-50 mb-1">Some quick example text to build on the
-                                    card title and make up the bulk of the card's content.</p>
-                            </div>
-                            <div
-                                class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
-                                <div class="badge alert-primary">400K</div>
-                                <a href="#" class="text-dark position-relative">
-                                    <i class="far fa-eye"></i>
-                                    <sup>380</sup>
-                                    <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
-                                    <sup>24</sup></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
