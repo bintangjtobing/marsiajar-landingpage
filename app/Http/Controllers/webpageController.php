@@ -22,9 +22,6 @@ class webpageController extends Controller
         $sub = subCategories::with('image')->get();
         $article = blog::with('user', 'image', 'subcategories', 'categories')->orderBy('created_at', 'DESC')->limit(6)->get();
         return view('home.index', ['sub' => $sub, 'article' => $article]);
-        // return response()->json($article);
-        // dd($article);
-        // return 200;
     }
     public function news()
     {
@@ -67,5 +64,10 @@ class webpageController extends Controller
     public function detailAjar()
     {
         return view('home.detail-ajar');
+    }
+    public function readArticle($slug)
+    {
+        $get = blog::where('slug', $slug)->with('user', 'image', 'subcategories', 'categories', 'file')->get();
+        return response()->json($get);
     }
 }

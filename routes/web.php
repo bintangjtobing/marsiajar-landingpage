@@ -49,6 +49,7 @@ Route::prefix('/educative')->group(function () {
     Route::get('/lembar-kerja', 'webpageController@lembarKerja');
     Route::get('/inspirasi', 'webpageController@inspirasi');
     Route::get('/detail', 'webpageController@detailAjar');
+    Route::get('/read/{slug}', 'webpageController@readArticle');
 });
 
 

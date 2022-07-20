@@ -120,26 +120,27 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                     <div class="row col-mb-50">
 
                         <div class="col-lg-8">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cum labore dignissimos
-                                voluptatibus, nobis quisquam molestias ab quaerat est a quam iste laudantium laborum qui
-                                fuga itaque numquam illo voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Odit optio doloribus libero eaque architecto fugiat odio sunt sequi enim vel
-                                necessitatibus veritatis, nemo placeat voluptate, veniam provident, magnam adipisci
-                                omnis?</p>
-                            <p>ipsum dolor sit amet consectetur adipisicing elit. Omnis eos rerum repudiandae laborum
-                                debitis est delectus, aspernatur in sunt quibusdam, dolorum tempora neque voluptas aut.
-                                Iure mollitia eligendi at aut.</p>
-                            <a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-                                <i class="icon-facebook"></i>
-                                <i class="icon-facebook"></i>
-                            </a>
-                            <a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-                                <i class="icon-twitter"></i>
-                                <i class="icon-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-                                <i class="icon-gplus"></i>
-                                <i class="icon-gplus"></i>
+                            <p>Marsiajar adalah platform digital yang memungkinkan para pendidik untuk berkolaborasi dan
+                                mendapatkan penghasilan tambahan dari setiap bahan ajar yang mereka buat. Berdiri sejak
+                                tahun 2017, kami percaya bahwa sesungguhnya setiap pendidik merupakan inovator dan
+                                desainer pendidikan yang handal. Dalam mempersiapkan kelas, ada banyak persiapan yang
+                                dilakukan, mulai dari ruang kelas, bahan presentasi hingga bahan ajar yang dibuat
+                                sendiri untuk menyesuaikan kebutuhan kelasnya. Jangan biarkan bahan ajar buatan anda
+                                menganggur dan terbuang, Marsiajar menyediakan tempat bagi anda untuk menunjukkannya
+                                pada dunia dan memungkinkan anda untuk mendapatkan penghasilan tambahan melalui program
+                                guru kreator.
+                            </p>
+                            <h3>KOMUNITAS PENDIDIK PEMBELAJAR MARSIAJAR</h3>
+                            <p>Komunitas pendidik pembelajar merupakan komunitas pendidik dimana anda dapat
+                                berkolaborasi dan mengembangkan diri bersama pendidik lainnya. Anda dapat mengikuti
+                                berbagai pelatihan bagaimana membuat bahan ajar yang mumpuni serta mengembangkan diri
+                                sebagai pendidik profesional.</p>
+
+                            <h5>Mari bergabung ke grup telegram bersama kami:</h5>
+                            <a href="https://t.me/+9ASAtLFr-eNkMDdl"
+                                class="social-icon inline-block si-small si-light si-rounded si-telegram">
+                                <i class="icon-telegram"></i>
+                                <i class="icon-telegram"></i>
                             </a>
                         </div>
                     </div>
