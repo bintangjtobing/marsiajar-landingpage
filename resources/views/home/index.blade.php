@@ -64,18 +64,30 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
             <!-- Categories
 					============================================= -->
             <div class="row course-categories clearfix mb-4">
+                @if (!$sub->isEmpty())
                 @foreach ($sub as $subs)
+                <?php
+                    // someting like this?
+                    $r = rand(0,255); //1. and 2.
+                    $g = rand(0,255); //3. and 4.
+                    $b = rand(0,255); //5. and 6.
+                ?>
                 <div class="col-lg-2 col-sm-3 col-6 mt-4">
                     <div class="card hover-effect">
-                        <img class="card-img" src="{{$subs->image->file}}" alt="Card
+                        <img class="card-img" id="img-sub" src="{{$subs->image->file}}" alt="Card
                                     image">
-                        <a href="#" class="card-img-overlay rounded p-0"
-                            style="background-color: rgba(251,51,100,0.8);">
+                        <a href="/tag/{{$subs->slug}}" class="card-img-overlay rounded p-0"
+                            style="background-color: rgba({{$r}},{{$g}},{{$b}},0.8);">
                             <span>{{$subs->sub_categories_name}}</span>
                         </a>
                     </div>
                 </div>
                 @endforeach
+                @else
+                <div class="col-lg-12 text-center">
+                    <h6>Data not found!</h6>
+                </div>
+                @endif
             </div>
 
             <div class="clear"></div>
@@ -104,14 +116,14 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                 <div class="clear"></div>
 
                 <div class="row mt-2">
-
-                    <!-- Course 1
-							============================================= -->
+                    @if (!$article->isEmpty())
                     @foreach ($article as $item)
                     <div class="col-md-4 mb-5">
                         <div class="card course-card hover-effect border-0">
-                            <a href="/educative/read/{{$item->slug}}"><img class="card-img-top"
-                                    src="{{$item->image->file}}" alt=" Card image cap"></a>
+                            <a href="/educative/read/{{$item->slug}}"><img class="card-img-top" style="
+    height: 300px;
+    object-fit: cover;
+" src="{{$item->image->file}}" alt=" Card image cap"></a>
                             <div class="card-body">
                                 <h4 class="card-title fw-bold mb-2"><a
                                         href="/educative/read/{{$item->slug}}">{{$item->title}}</a></h4>
@@ -136,6 +148,11 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                         </div>
                     </div>
                     @endforeach
+                    @else
+                    <div class="col-md-12 text-center">
+                        <h5>Data not found!</h5>
+                    </div>
+                    @endif
                 </div>
             </div>
 

@@ -32,6 +32,34 @@
     <meta name="description" content="@yield('page_description')" />
     <meta name="keywords" content="marsiajar, @yield('page_keywords')" />
 
+    {{-- Meta --}}
+    <meta name="og:title" property="og:title" content="@yield('title') | Marsiajar" />
+    <meta name="og:url" property="og:url" content="{{Request::url()}}" />
+    <meta name="og:type" property="og:type" content="website" />
+    <meta name="og:image" property="og:image"
+        content="@if(View::hasSection('tag_cover'))@yield('tag_cover')@else https://res.cloudinary.com/boxity-id/image/upload/v1658586208/client/marsiajar/tag-cover_qgmxj4.png @endif" />
+    <meta name="og:description" property="og:description" content="@yield('page_description')" />
+    <meta name="twitter:card" content="@yield('title') | Marsiajar" />
+    <meta name="twitter:title" property="og:title" content="@yield('title') | Marsiajar" />
+    <meta name="twitter:url" property="og:url" content="{{Request::url()}}" />
+    <meta name="twitter:type" property="og:type" content="website" />
+    <meta name="twitter:image" property="og:image"
+        content="@if(View::hasSection('tag_cover'))@yield('tag_cover')@else https://res.cloudinary.com/boxity-id/image/upload/v1658586208/client/marsiajar/tag-cover_qgmxj4.png @endif" />
+    <meta name="twitter:description" property="og:description" content="@yield('page_description')" />
+    <link rel="canonical" href="{{Request::url()}}/" />
+    <link rel="shortcut icon" href="@if(View::hasSection('icon'))@yield('icon')@else
+        https://res.cloudinary.com/btsa-co-id/image/upload/v1645849374/asset/company/tx50os7wxj4p0pz1gpay.png @endif"
+        type="image/png" sizes="64x64" />
+    <meta name="og:email" content="info@marsiajar.com" />
+    <meta name="og:phone_number" content="02129021873" />
+    <meta name="og:latitude" content="-6.1465558" />
+    <meta name="og:longitude" content="106.7843094" />
+    <meta name="og:street-address" content="Jalan kenangan No.200 Kecamatan Medan Tuntungan, Sumatera Utara" />
+    <meta name="og:locality" content="Medan" />
+    <meta name="og:region" content="ID" />
+    <meta name="og:postal-code" content="20134" />
+    <meta name="og:country-name" content="Indonesia" />
+
 </head>
 
 <body class="stretched">
@@ -69,7 +97,7 @@
 						============================================= -->
                         <div class="top-links">
                             <ul class="top-links-container">
-                                <li class="top-links-item"><a href="#">Mulai berbagi</a></li>
+                                <li class="top-links-item"><a href="{{ENV('APP_BE')}}">Mulai berbagi</a></li>
                             </ul>
                         </div><!-- .top-links end -->
 
@@ -156,6 +184,7 @@
                                         <div><i class="icon-line-grid"></i>Cari Bahan Ajar</div>
                                     </a>
                                     <ul class="sub-menu-container">
+                                        @if (!$getCategories->isEmpty())
                                         @foreach ($getCategories as $item)
                                         <li class="menu-item"><a class="menu-link" href="/educative/{{$item->slug}}">
                                                 <div><i class="icon-chart-bar1"></i>{{$item->categories_name}}
@@ -163,6 +192,13 @@
                                             </a>
                                         </li>
                                         @endforeach
+                                        @else
+                                        <li class="menu-item"><a class="menu-link" href="#">
+                                                <div>Data not found!
+                                                </div>
+                                            </a>
+                                        </li>
+                                        @endif
                                     </ul>
                                 </li>
                                 <li class="menu-item"><a href="/news" class="menu-link">
@@ -243,7 +279,7 @@
                             <h4 class="text-uppercase ls2 fw-normal">Support</h4>
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <h5 class="mb-2 fw-normal"><a href="#">My Account</a></h5>
+                                    <h5 class="mb-2 fw-normal"><a href="{{ENV('APP_BE')}}">My Account</a></h5>
                                 </li>
                                 <li>
                                     <h5 class="mb-2 fw-normal"><a href="#">F.a.Q</a></h5>
@@ -252,7 +288,7 @@
                                     <h5 class="mb-2 fw-normal"><a href="#">Become an educators</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="mb-2 fw-normal"><a href="#">Contact</a></h5>
+                                    <h5 class="mb-2 fw-normal"><a href="/contact-us">Contact</a></h5>
                                 </li>
                             </ul>
                         </div>

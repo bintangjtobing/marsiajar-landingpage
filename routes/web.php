@@ -43,14 +43,13 @@ Route::get('/events', 'webpageController@events');
 Route::get('/about-us', 'webpageController@aboutUs');
 Route::get('/contact-us', 'webpageController@contactUs');
 
-Route::prefix('/educative')->group(function () {
-    Route::get('/bahan-ajar', 'webpageController@bahanAjar');
-    Route::get('/rencana-ajar', 'webpageController@rencanaAjar');
-    Route::get('/lembar-kerja', 'webpageController@lembarKerja');
-    Route::get('/inspirasi', 'webpageController@inspirasi');
-    Route::get('/detail', 'webpageController@detailAjar');
-    Route::get('/read/{slug}', 'webpageController@readArticle');
-});
+Route::get('/educative/{slug}', 'webpageController@eduCategories');
+Route::get('/tag/{slug}', 'webpageController@getArticleByTag');
+Route::get('/rencana-ajar', 'webpageController@rencanaAjar');
+Route::get('/lembar-kerja', 'webpageController@lembarKerja');
+Route::get('/inspirasi', 'webpageController@inspirasi');
+Route::get('/detail', 'webpageController@detailAjar');
+Route::get('/read/{slug}', 'webpageController@readArticle');
 
 
 // additional

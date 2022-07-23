@@ -3412,6 +3412,11 @@ html[xmlns] .slider-wrap {
         transition: top .4s ease;
     }
 
+    #img-sub {
+        height: 120px;
+        object-fit: cover;
+    }
+
     .sticky-header #header-wrap {
         position: fixed;
         top: 0;

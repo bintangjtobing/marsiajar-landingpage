@@ -1,6 +1,6 @@
 @extends('welcome')
-@section('title', $categories->categories_name)
-@section('page_description', $categories->description)
+@section('title', $sub->sub_categories_name)
+@section('page_description', $sub->description)
 @section('page_keywords', '')
 @section('content')
 <section id="page-title" class="page-title-parallax page-title-dark"
@@ -8,11 +8,11 @@
     data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
 
     <div class="container clearfix">
-        <h1>{{$categories->categories_name}}</h1>
-        <span>{{$categories->description}}</span>
+        <h1>{{$sub->sub_categories_name}}</h1>
+        <span>{{$sub->description}}</span>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{$categories->categories_name}}</li>
+            <li class="breadcrumb-item active" aria-current="page">{{$sub->sub_categories_name}}</li>
         </ol>
     </div>
 
@@ -71,8 +71,8 @@
 
                             <h4>Kategori</h4>
                             <ul>
-                                @foreach ($subcategories as $sub)
-                                <li><a href="/tag/{{$sub->slug}}">{{$sub->sub_categories_name}}</a></li>
+                                @foreach ($cat as $sub)
+                                <li><a href="/educative/{{$sub->slug}}">{{$sub->categories_name}}</a></li>
                                 @endforeach
                             </ul>
 

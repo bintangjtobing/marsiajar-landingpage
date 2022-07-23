@@ -103,7 +103,7 @@
 
                     <address>
                         <strong>Kantor kami:</strong><br>
-                        Jalan jalan kenangan No.200 <br>
+                        Jalan kenangan No.200 <br>
                         Kecamatan Medan Tuntungan, Sumatera Utara
                     </address>
                     <abbr title="Phone Number"><strong>Phone:</strong></abbr> +62 812 3456 7890<br>

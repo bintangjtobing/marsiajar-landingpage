@@ -25,7 +25,7 @@ class webpageController extends Controller
     }
     public function news()
     {
-        $blogs = blog::orderBy('created_at', 'desc')->where('status', 1)->with('user', 'image', 'categories', 'subcategories', 'file')->get();
+        $blogs = blog::orderBy('created_at', 'desc')->where('status', 1)->with('user', 'image', 'categories', 'subcategories', 'file')->orderBy('views', 'DESC')->paginate(6);
         return view('home.blog-2', ['blogs' => $blogs]);
         // return response()->json($blogs);
     }
@@ -45,21 +45,13 @@ class webpageController extends Controller
     {
         return view('home.contact');
     }
-    public function bahanAjar()
+    public function eduCategories($slug)
     {
-        return view('home.bahan-ajar');
-    }
-    public function rencanaAjar()
-    {
-        return view('home.rencana-ajar');
-    }
-    public function lembarKerja()
-    {
-        return view('home.lembar-kerja');
-    }
-    public function inspirasi()
-    {
-        return view('home.inspirasi');
+        $categories = categories::where('slug', $slug)->first();
+        $blog = blog::with('user', 'image', 'subcategories', 'categories', 'image')->orderBy('created_at', 'DESC')->where('category', $categories->id)->get();
+        $subcategories = subCategories::all();
+        return view('home.bahan-ajar', ['categories' => $categories, 'blog' => $blog, 'subcategories' => $subcategories]);
+        // return response()->json($blog);
     }
     public function detailAjar()
     {
@@ -67,7 +59,21 @@ class webpageController extends Controller
     }
     public function readArticle($slug)
     {
-        $get = blog::where('slug', $slug)->with('user', 'image', 'subcategories', 'categories', 'file')->get();
-        return response()->json($get);
+        $blogView = blog::where('slug', $slug)->with('user', 'image', 'file')->first();
+        $blogView->views += 1;
+        $blogView->save();
+
+        $article = blog::where('slug', $slug)->with('user', 'image', 'subcategories', 'categories', 'file')->first();
+        $sub = subCategories::with('image')->get();
+        // return response()->json($article);
+        return view('home.read-article', ['article' => $article, 'sub' => $sub]);
+    }
+    public function getArticleByTag($slug)
+    {
+        $sub = subCategories::where('slug', $slug)->first();
+        $cat = categories::all();
+        $blog = blog::with('user', 'image', 'subcategories', 'categories', 'image')->orderBy('created_at', 'DESC')->where('subcategory', $sub->id)->get();
+        // return response()->json($blog);
+        return view('home.tag', ['blog' => $blog, 'sub' => $sub, 'cat' => $cat]);
     }
 }
