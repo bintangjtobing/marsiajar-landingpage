@@ -18,7 +18,10 @@ Route::prefix('sc/dev')->group(function () {
         return Redirect::to('https://docs.google.com/spreadsheets/d/e/2PACX-1vTSANWYAzhvdIu6A8GSpy5KhjsZeUamYlbvWWhmES13PUwAsDy0-TJ4uErmZgxSLR5DUOIZckGO5G20/pubhtml');
     });
 });
-
+Route::get('/log-viewer', [
+    'as'   => 'log-viewer::dashboard',
+    'uses' => '\Arcanedev\LogViewer\Http\Controllers\LogViewerController@index',
+]);
 // Social media link
 Route::get('/linkedin', function () {
     return Redirect::to('https://linkedin.com/company/');
