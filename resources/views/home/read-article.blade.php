@@ -1,7 +1,9 @@
 @extends('welcome')
-@section('title', $article->title)
+@section('title', $article->seo_title ?? $article->title)
 @section('page_description', $article->seo_description ?? '')
 @section('page_keywords', '')
+@section('tag_cover',{{$article->image->file}} ?? '')
+
 @section('content')
 <section id="page-title">
 
