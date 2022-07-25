@@ -13,6 +13,7 @@ use App\categoriesImages;
 use App\album_photos;
 use App\albums;
 use Illuminate\Support\Facades\DB;
+use App\comments;
 
 
 class webpageController extends Controller
@@ -59,14 +60,14 @@ class webpageController extends Controller
     }
     public function readArticle($slug)
     {
-        $blogView = blog::where('slug', $slug)->with('user', 'image', 'file')->first();
+        $blogView = blog::where('slug', $slug)->with('user', 'image', 'file', 'comments')->first();
         $blogView->views += 1;
         $blogView->save();
 
-        $article = blog::where('slug', $slug)->with('user', 'image', 'subcategories', 'categories', 'file')->first();
+        $article = blog::where('slug', $slug)->with('user', 'image', 'subcategories', 'categories', 'file', 'comments')->first();
         $sub = subCategories::with('image')->get();
-        // return response()->json($article);
-        return view('home.read-article', ['article' => $article, 'sub' => $sub]);
+        // return response()->json($blogView);
+        return view('home.read-article', ['blogView' => $blogView, 'article' => $article, 'sub' => $sub]);
     }
     public function getArticleByTag($slug)
     {
@@ -75,5 +76,18 @@ class webpageController extends Controller
         $blog = blog::with('user', 'image', 'subcategories', 'categories', 'image')->orderBy('created_at', 'DESC')->where('subcategory', $sub->id)->get();
         // return response()->json($blog);
         return view('home.tag', ['blog' => $blog, 'sub' => $sub, 'cat' => $cat]);
+    }
+    public function postComments(Request $request, $slug)
+    {
+        $blog = blog::where('slug', $slug)->first();
+        $comments = new comments();
+        $comments->user_id = $request->user_id;
+        $comments->name = $request->name;
+        $comments->email = $request->email;
+        $comments->post_id = $blog->id;
+        $comments->parent_id = $request->parent_id;
+        $comments->body = $request->body;
+        $comments->save();
+        return back()->with('success', 'You successfully give a comment to this article');
     }
 }

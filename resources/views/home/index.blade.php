@@ -32,7 +32,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
         <!-- HTML5 Video Wrap
 				============================================= -->
         <div class="video-wrap">
-            <video id="slide-video" poster="{!!asset('webpage/demos/marsiajar/poster-1.jpg')!!}" preload=" auto" loop
+            <video id="slide-video" poster="{!!asset('webpage/demos/marsiajar/poster-2.jpg')!!}" preload=" auto" loop
                 autoplay muted>
                 <source src='{!!asset(' webpage/demos/course/images/video/123.mp4')!!}' type='video/mp4' />
             </video>

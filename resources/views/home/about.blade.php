@@ -107,7 +107,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
         <div class="row align-items-stretch">
 
             <div class="col-md-5 col-padding min-vh-75" style="background:
-                url('https://media.edutopia.org/styles/responsive_2880px_16x9/s3/masters/2017-11/469746_STW_Crellin_LearningPartners.jpg')
+                url('{!!asset('webpage/demos/marsiajar/album/DSCF7739.jpg')!!}')
                 center center no-repeat; background-size: cover;"></div>
 
             <div class="col-md-7 col-padding">
