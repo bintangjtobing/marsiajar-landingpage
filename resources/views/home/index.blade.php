@@ -120,13 +120,13 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                     @foreach ($article as $item)
                     <div class="col-md-4 mb-5">
                         <div class="card course-card hover-effect border-0">
-                            <a href="/educative/read/{{$item->slug}}"><img class="card-img-top" style="
+                            <a href="/read/{{$item->slug}}"><img class="card-img-top" style="
     height: 300px;
     object-fit: cover;
 " src="{{$item->image->file}}" alt=" Card image cap"></a>
                             <div class="card-body">
-                                <h4 class="card-title fw-bold mb-2"><a
-                                        href="/educative/read/{{$item->slug}}">{{$item->title}}</a></h4>
+                                <h4 class="card-title fw-bold mb-2"><a href="/read/{{$item->slug}}">{{$item->title}}</a>
+                                </h4>
                                 <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
                                         class="text-black-50">{{$item->subcategories['sub_categories_name']}}</a>
                                 </p>
