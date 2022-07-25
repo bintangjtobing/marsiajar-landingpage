@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="{!!asset('webpage/css/colors.php')!!}?color=2FC39C" type="text/css" />
     <link rel="stylesheet" href="{!!asset('webpage/demos/course/css/fonts.css')!!}" type="text/css" />
     <link rel="stylesheet" href="{!!asset('webpage/demos/course/course.css')!!}" type="text/css" />
-    <link rel="shortcut icon" href="{!!asset('webpage/demos/marsiajar/logo.ico')!!}" type="image/x-icon">
+    <link rel="shortcut icon" href="https://uat-landingpage.marsiajar.com/webpage/demos/marsiajar/logo.ico"
+        type="image/x-icon">
     <link rel="stylesheet" href="{!!asset('webpage/css/components/bs-rating.css')!!}" type="text/css" />
     <script src="https://kit.fontawesome.com/98c197c895.js" crossorigin="anonymous"></script>
 

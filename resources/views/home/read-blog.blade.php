@@ -61,7 +61,7 @@ WMS, boxity financial, boxity indonesia, news from boxity')
 
 
                     <!-- SINGLE POST SHARE LINKS -->
-                    {{-- <div class="row post-share-links d-flex align-items-center">
+                    <div class="row post-share-links d-flex align-items-center">
 
                         <!-- POST TAGS -->
                         <div class="col-md-9 col-xl-8 post-tags-list">
@@ -80,7 +80,7 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                             </ul>
                         </div>
 
-                    </div> <!-- END SINGLE POST SHARE --> --}}
+                    </div> <!-- END SINGLE POST SHARE -->
 
                 </div>
             </div>
