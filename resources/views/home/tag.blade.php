@@ -69,7 +69,7 @@
 
                         <div class="widget widget_links clearfix">
 
-                            <h4>Kategori</h4>
+                            <h4>Kelas</h4>
                             <ul>
                                 @foreach ($cat as $sub)
                                 <li><a href="/educative/{{$sub->slug}}">{{$sub->categories_name}}</a></li>
