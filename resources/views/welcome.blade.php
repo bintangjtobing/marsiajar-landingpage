@@ -19,10 +19,11 @@
     <link rel="stylesheet" href="{!!asset('webpage/one-page/css/et-line.css')!!}" type="text/css" />
     <link rel="stylesheet" href="{!!asset('webpage/css/custom.css')!!}" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{!!asset('webpage/css/colors.php')!!}?color=2FC39C" type="text/css" />
+    <link rel="stylesheet" href="{!!asset('webpage/css/colors.php')!!}?color=24a693" type="text/css" />
     <link rel="stylesheet" href="{!!asset('webpage/demos/course/css/fonts.css')!!}" type="text/css" />
     <link rel="stylesheet" href="{!!asset('webpage/demos/course/course.css')!!}" type="text/css" />
     <link rel="shortcut icon" href="{!!asset('webpage/demos/marsiajar/logo.ico')!!}" type="image/x-icon">
+    <link rel="stylesheet" href="{!!asset('webpage/css/components/bs-rating.css')!!}" type="text/css" />
     <script src="https://kit.fontawesome.com/98c197c895.js" crossorigin="anonymous"></script>
 
     <!-- Document Description
@@ -30,6 +31,34 @@
     <title>Marsiajar - @yield('title')</title>
     <meta name="description" content="@yield('page_description')" />
     <meta name="keywords" content="marsiajar, @yield('page_keywords')" />
+
+    {{-- Meta --}}
+    <meta name="og:title" property="og:title" content="@yield('title') | Marsiajar" />
+    <meta name="og:url" property="og:url" content="{{Request::url()}}" />
+    <meta name="og:type" property="og:type" content="website" />
+    <meta name="og:image" property="og:image"
+        content="@if(View::hasSection('tag_cover'))@yield('tag_cover')@else https://res.cloudinary.com/boxity-id/image/upload/v1658586208/client/marsiajar/tag-cover_qgmxj4.png @endif" />
+    <meta name="og:description" property="og:description" content="@yield('page_description')" />
+    <meta name="twitter:card" content="@yield('title') | Marsiajar" />
+    <meta name="twitter:title" property="og:title" content="@yield('title') | Marsiajar" />
+    <meta name="twitter:url" property="og:url" content="{{Request::url()}}" />
+    <meta name="twitter:type" property="og:type" content="website" />
+    <meta name="twitter:image" property="og:image"
+        content="@if(View::hasSection('tag_cover'))@yield('tag_cover')@else https://res.cloudinary.com/boxity-id/image/upload/v1658586208/client/marsiajar/tag-cover_qgmxj4.png @endif" />
+    <meta name="twitter:description" property="og:description" content="@yield('page_description')" />
+    <link rel="canonical" href="{{Request::url()}}/" />
+    <link rel="shortcut icon" href="@if(View::hasSection('icon'))@yield('icon')@else
+        https://res.cloudinary.com/btsa-co-id/image/upload/v1645849374/asset/company/tx50os7wxj4p0pz1gpay.png @endif"
+        type="image/png" sizes="64x64" />
+    <meta name="og:email" content="info@marsiajar.com" />
+    <meta name="og:phone_number" content="02129021873" />
+    <meta name="og:latitude" content="-6.1465558" />
+    <meta name="og:longitude" content="106.7843094" />
+    <meta name="og:street-address" content="Jalan kenangan No.200 Kecamatan Medan Tuntungan, Sumatera Utara" />
+    <meta name="og:locality" content="Medan" />
+    <meta name="og:region" content="ID" />
+    <meta name="og:postal-code" content="20134" />
+    <meta name="og:country-name" content="Indonesia" />
 
 </head>
 
@@ -68,7 +97,7 @@
 						============================================= -->
                         <div class="top-links">
                             <ul class="top-links-container">
-                                <li class="top-links-item"><a href="#">Mulai berbagi</a></li>
+                                <li class="top-links-item"><a href="{{ENV('APP_BE')}}">Mulai berbagi</a></li>
                             </ul>
                         </div><!-- .top-links end -->
 
@@ -139,59 +168,53 @@
                                 </path>
                             </svg>
                         </div>
-
+                        @php
+                        $getCategories = DB::table('categories')->orderBy('created_at',
+                        'DESC')->where('categories_name', '!=', 'Umum')->get();
+                        @endphp
                         <!-- Primary Navigation
 						============================================= -->
                         <nav class="primary-menu with-arrows">
-
                             <ul class="menu-container">
-                                <li class="menu-item"><a href="#" class="menu-link">
-                                        <div><i class="icon-line-home"></i>Home</div>
+                                <li class="menu-item"><a href="/" class="menu-link">
+                                        <div><i class="icon-line-home"></i>Beranda</div>
                                     </a>
                                 </li>
                                 <li class="menu-item"><a class="menu-link" href="#" class="ps-0">
-                                        <div><i class="icon-line-grid"></i>Educative</div>
+                                        <div><i class="icon-line-grid"></i>Cari Bahan Ajar</div>
                                     </a>
                                     <ul class="sub-menu-container">
-                                        <li class="menu-item"><a class="menu-link" href="#">
-                                                <div><i class="icon-line2-user"></i>Ajar</div>
-                                            </a>
-                                            <ul class="sub-menu-container">
-                                                <li class="menu-item"><a class="menu-link" href="#">
-                                                        <div>Bahan Ajar</div>
-                                                    </a></li>
-                                                <li class="menu-item"><a class="menu-link" href="#">
-                                                        <div>Rencana Ajar</div>
-                                                    </a></li>
-                                                <li class="menu-item"><a class="menu-link" href="#">
-                                                        <div>Lembar Kerja</div>
-                                                    </a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item"><a class="menu-link" href="#">
-                                                <div><i class="icon-chart-bar1"></i>Inspirasi</div>
+                                        @if (!$getCategories->isEmpty())
+                                        @foreach ($getCategories as $item)
+                                        <li class="menu-item"><a class="menu-link" href="/educative/{{$item->slug}}">
+                                                <div><i class="icon-chart-bar1"></i>{{$item->categories_name}}
+                                                </div>
                                             </a>
                                         </li>
+                                        @endforeach
+                                        @else
+                                        <li class="menu-item"><a class="menu-link" href="#">
+                                                <div>Data not found!
+                                                </div>
+                                            </a>
+                                        </li>
+                                        @endif
                                     </ul>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
-                                        <div><i class="icon-line-info"></i>News</div>
+                                <li class="menu-item"><a href="/news" class="menu-link">
+                                        <div><i class="icon-line-info"></i>Berita</div>
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
+                                <li class="menu-item"><a href="/events" class="menu-link">
                                         <div><i class="icon-line2-camcorder"></i>Events</div>
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
-                                        <div><i class="icon-line-image"></i>Gallery</div>
+                                <li class="menu-item"><a href="/about-us" class="menu-link">
+                                        <div><i class="icon-line-briefcase"></i>Tentang kami</div>
                                     </a>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
-                                        <div><i class="icon-line-briefcase"></i>About Us</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
-                                        <div><i class="icon-line-phone"></i>Contact Us</div>
+                                <li class="menu-item"><a href="/contact-us" class="menu-link">
+                                        <div><i class="icon-line-phone"></i>Hubungi Kami</div>
                                     </a>
                                 </li>
                             </ul>
@@ -236,7 +259,7 @@
                             <a href="#"><i class="icon-line2-envelope me-2"></i>info@marsiajar.com</a>
                         </div>
                         <div class="col-6 col-md-3">
-                            <h4 class="text-uppercase ls2 fw-normal">Best Teaching Materials</h4>
+                            <h4 class="text-uppercase ls2 fw-normal">Bahan ajar terpopuler</h4>
                             <ul class="list-unstyled mb-0">
                                 <li>
                                     <h5 class="mb-0"><a href="#" class="text-white">Cooking Classes</a></h5>
@@ -256,7 +279,7 @@
                             <h4 class="text-uppercase ls2 fw-normal">Support</h4>
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <h5 class="mb-2 fw-normal"><a href="#">My Account</a></h5>
+                                    <h5 class="mb-2 fw-normal"><a href="{{ENV('APP_BE')}}">My Account</a></h5>
                                 </li>
                                 <li>
                                     <h5 class="mb-2 fw-normal"><a href="#">F.a.Q</a></h5>
@@ -265,7 +288,7 @@
                                     <h5 class="mb-2 fw-normal"><a href="#">Become an educators</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="mb-2 fw-normal"><a href="#">Contact</a></h5>
+                                    <h5 class="mb-2 fw-normal"><a href="/contact-us">Contact</a></h5>
                                 </li>
                             </ul>
                         </div>
@@ -318,12 +341,98 @@
 	============================================= -->
     <script src="{!!asset('webpage/js/jquery.js')!!}"></script>
     <script src="{!!asset('webpage/js/plugins.min.js')!!}"></script>
-
+    <!-- Star Rating Plugin -->
+    <script src="{!!asset('webpage/js/components/star-rating.js')!!}"></script>
 
     <!-- Footer Scripts
 	============================================= -->
     <script src="{!!asset('webpage/js/functions.js')!!}"></script>
+    <script>
+        $("#input-7").rating({
+            containerClass: 'is-heart',
+            filledStar: '<i class="icon-heart3"></i>',
+            emptyStar: '<i class="icon-heart-empty"></i>',
+            starCaptions: {
+                0: "Not Rated",
+                1: "Very Poor",
+                2: "Poor",
+                3: "Ok",
+                4: "Good",
+                5: "Very Good"
+            },
+            starCaptionClasses: {
+                0: "text-danger",
+                1: "text-danger",
+                2: "text-warning",
+                3: "text-info",
+                4: "text-primary",
+                5: "text-success"
+            },
+        });
 
+        $("#input-8").rating({
+            containerClass: '',
+            filledStar: '<i class="icon-flag21"></i>',
+            emptyStar: '<i class="icon-flag-alt"></i>',
+            starCaptions: {
+                0: "Not Rated",
+                1: "1 Flags",
+                2: "2 Flags",
+                3: "3 Flags",
+                4: "4 Flags",
+                5: "5 Flags"
+            },
+            starCaptionClasses: {
+                0: "text-danger",
+                1: "text-danger",
+                2: "text-warning",
+                3: "text-info",
+                4: "text-primary",
+                5: "text-success"
+            },
+        });
+
+        $("#input-11").rating({
+            starCaptions: {
+                0: "Not Rated",
+                1: "Very Poor",
+                2: "Poor",
+                3: "Ok",
+                4: "Good",
+                5: "Very Good"
+            },
+            starCaptionClasses: {
+                0: "text-danger",
+                1: "text-danger",
+                2: "text-warning",
+                3: "text-info",
+                4: "text-primary",
+                5: "text-success"
+            },
+        });
+
+        $("#input-13").on("rating.clear", function (event) {
+            $('#rating-notification-message').attr('data-notify-type', 'error').attr('data-notify-msg',
+                'Your rating is reset');
+            SEMICOLON.widget.notifications({
+                el: jQuery('#rating-notification-message')
+            });
+        });
+        $("#input-13").on("rating.change", function (event, value, caption) {
+            $('#rating-notification-message').attr('data-notify-msg', 'You rated: ' + value + ' Stars');
+            SEMICOLON.widget.notifications({
+                el: jQuery('#rating-notification-message')
+            });
+        });
+
+        $("#input-14").on("rating.change", function (event, value, caption) {
+            $("#input-14").rating("refresh", {
+                disabled: true,
+                showClear: false
+            });
+        });
+
+    </script>
 </body>
 
 </html>

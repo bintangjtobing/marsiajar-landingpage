@@ -306,19 +306,6 @@ window.scwEvents = window.scwEvents || {};
 
 			SEMICOLON.initialize.functions( easingJs );
 			SEMICOLON.initialize.functions( bootstrapJs );
-
-			if( ! 'IntersectionObserver' in window ){
-				let intersectObserve = {
-					default: 'body',
-					file: 'intersection-observer.js',
-					error: 'intersection-observer.js: Plugin could not be loaded',
-					pluginfn: () => typeof window.IntersectionObserver !== "undefined",
-					trigger: 'intersectObservePolyfill',
-					class: 'has-polyfill-intersection-observer'
-				};
-
-				SEMICOLON.initialize.functions( intersectObserve );
-			}
 		},
 
 		goToTop: function(){
