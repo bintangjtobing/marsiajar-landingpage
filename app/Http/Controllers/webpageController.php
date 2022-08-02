@@ -21,7 +21,7 @@ class webpageController extends Controller
     public function index()
     {
         $sub = subCategories::with('image')->get();
-        $article = blog::with('user', 'image', 'subcategories', 'categories')->orderBy('created_at', 'DESC')->limit(6)->get();
+        $article = blog::with('user', 'image', 'subcategories', 'categories')->where('status', 1)->orderBy('created_at', 'DESC')->limit(6)->get();
         return view('home.index', ['sub' => $sub, 'article' => $article]);
     }
     public function news()
