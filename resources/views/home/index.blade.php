@@ -10,7 +10,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 <section id="slider" class="slider-element min-vh-75">
     <div class="slider-inner">
 
-        <div class="vertical-middle">
+    <div class="vertical-middle">
             <div class="container text-center">
                 <div class="row justify-content-center">
                     <div class="col-md-8">

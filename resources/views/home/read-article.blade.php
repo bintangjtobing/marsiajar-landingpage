@@ -333,11 +333,7 @@
                 <div class="sidebar col-lg-3">
                     <div class="sidebar-widgets-wrap">
 
-                        <div class="widget widget-twitter-feed clearfix">
 
-                            {{-- Untuk google ads --}}
-
-                        </div>
                         <div class="widget clearfix">
 
                             <h4>Tag Cloud</h4>
@@ -346,6 +342,12 @@
                                 <a href="/tag/{{$sub->slug}}">{{$sub->sub_categories_name}}</a>
                                 @endforeach
                             </div>
+
+                        </div>
+                        <div class="widget widget-twitter-feed clearfix">
+
+                            {{-- Untuk google ads --}}
+                            <img src="{{asset('webpage/ads/ads-ex.jpg')}}" alt="" class="img-fluid">
 
                         </div>
 
