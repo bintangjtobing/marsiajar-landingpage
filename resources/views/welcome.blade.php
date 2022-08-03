@@ -48,8 +48,7 @@
     <meta name="twitter:description" property="og:description" content="@yield('page_description')" />
     <link rel="canonical" href="{{Request::url()}}/" />
     <link rel="shortcut icon" href="@if(View::hasSection('icon'))@yield('icon')@else
-        https://res.cloudinary.com/btsa-co-id/image/upload/v1645849374/asset/company/tx50os7wxj4p0pz1gpay.png @endif"
-        type="image/png" sizes="64x64" />
+        {!!asset('webpage/demos/marsiajar/logo.ico')!!} @endif" type="image/png" sizes="64x64" />
     <meta name="og:email" content="info@marsiajar.com" />
     <meta name="og:phone_number" content="02129021873" />
     <meta name="og:latitude" content="-6.1465558" />
