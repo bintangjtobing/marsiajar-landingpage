@@ -10,7 +10,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 <section id="slider" class="slider-element min-vh-75">
     <div class="slider-inner">
 
-    <div class="vertical-middle">
+        <div class="vertical-middle">
             <div class="container text-center">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
@@ -32,8 +32,8 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
         <!-- HTML5 Video Wrap
 				============================================= -->
         <div class="video-wrap">
-            <video id="slide-video" poster="{!!asset('webpage/demos/marsiajar/poster-2.jpg')!!}" preload=" auto" loop
-                autoplay muted>
+            <video id="slide-video" poster="{!!asset('webpage/demos/marsiajar/album/IMG_20190209_180012.jpg')!!}"
+                preload=" auto" loop autoplay muted>
                 <source src='{!!asset(' webpage/demos/course/images/video/123.mp4')!!}' type='video/mp4' />
             </video>
             <div class="video-overlay" style="background: rgba(0,0,0,0.65); z-index: 1"></div>

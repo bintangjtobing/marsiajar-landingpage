@@ -107,7 +107,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
         <div class="row align-items-stretch">
 
             <div class="col-md-5 col-padding min-vh-75" style="background:
-                url('{!!asset('webpage/demos/marsiajar/album/DSCF7739.jpg')!!}')
+                url('{!!asset('webpage/demos/marsiajar/album/IMG_20180825_153145.jpg')!!}')
                 center center no-repeat; background-size: cover;"></div>
 
             <div class="col-md-7 col-padding">

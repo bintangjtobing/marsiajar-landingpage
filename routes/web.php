@@ -42,6 +42,9 @@ Route::get('/facebook', function () {
 Route::get('/', 'webpageController@index');
 Route::get('/news', 'webpageController@news');
 Route::get('/events', 'webpageController@events');
+Route::get('/events/{slug}', 'webpageController@getEvents')->name('events');
+Route::get('/events/registration/{slug}', 'webpageController@getEventsApply')->name('events');
+Route::post('/events/registration/{slug}', 'webpageController@postEventsApply')->name('events');
 // Route::get('/gallery', 'webpageController@gallery');
 Route::get('/about-us', 'webpageController@aboutUs');
 Route::get('/contact-us', 'webpageController@contactUs');

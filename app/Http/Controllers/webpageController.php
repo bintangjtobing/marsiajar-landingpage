@@ -14,6 +14,10 @@ use App\album_photos;
 use App\albums;
 use Illuminate\Support\Facades\DB;
 use App\comments;
+use App\event_images;
+use App\event_participants;
+use App\events;
+
 
 
 class webpageController extends Controller
@@ -32,7 +36,42 @@ class webpageController extends Controller
     }
     public function events()
     {
-        return view('home.events');
+        $events = events::with('image')->orderBy('created_at', 'DESC')->limit(6)->get();
+        $eventgal = event_images::all();
+        return view('home.events', ['events' => $events, 'eventgal' => $eventgal]);
+        // return response()->json($eventgal);
+    }
+    public function getEvents(Request $req, $slug)
+    {
+        $events = events::where('slug', $slug)->with('user', 'image')->first();
+        return view('home.eventsDetail', ['events' => $events]);
+        // return response()->json($events);
+        // dd($job);
+    }
+    public function getEventsApply($slug)
+    {
+        $events =
+            events::where('slug', $slug)->with('user', 'image')->first();
+        return view('home.eventsRegistration', ['events' => $events]);
+        // dd($job);
+    }
+    public function postEventsApply($slug, Request $request)
+    {
+        $get =
+            events::where('slug', $slug)->first();
+        $events = new event_participants();
+        $events->event_id = $get->id ?? '-';
+        $events->name = $request->name;
+        $events->email = $request->email;
+        $events->nohp = $request->nohp;
+        $events->type = $request->type;
+        $events->refrences = $request->refrences;
+        $events->sector = $request->sector;
+        $events->description = $request->description;
+
+        $events->save();
+        return redirect()->back()->with('success', 'Congratulations!');
+        // dd($request->all());
     }
     // public function gallery()
     // {
