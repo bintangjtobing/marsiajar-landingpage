@@ -155,7 +155,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                     <p>
                         If you have further questions regarding the privacy and security of your information or wish to
                         update or delete your data then please contact us at: <a
-                            href="mailto:info@boxity.id">info@boxity.id</a>
+                            href="mailto:info@marsiajar.com">info@marsiajar.com</a>
                     </p>
                 </div> <!-- END TERMS BOX -->
 

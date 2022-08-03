@@ -215,7 +215,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                     </p>
                     <h5 class="h5-xl"><strong>Contact Information</strong></h5>
                     <p>Questions about the Terms of Service should be sent to us at <a
-                            href="mailto:info@boxity.id">info@boxity.id</a>
+                            href="mailto:info@marsiajar.com">info@marsiajar.com</a>
                     </p>
                 </div> <!-- END TERMS BOX -->
 
