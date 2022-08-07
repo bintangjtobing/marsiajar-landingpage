@@ -37,9 +37,11 @@ Route::get('/facebook', function () {
     return Redirect::to('http://www.facebook.com/');
 });
 
-
+$token = Str::random(16);
 // General Menu
 Route::get('/', 'webpageController@index');
+Route::get('/{token}/register', 'webpageController@register');
+Route::post('/{token}/register', 'webpageController@postRegister');
 Route::get('/news', 'webpageController@news');
 Route::get('/events', 'webpageController@events');
 Route::get('/events/{slug}', 'webpageController@getEvents')->name('events');

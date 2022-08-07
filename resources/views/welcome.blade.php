@@ -96,7 +96,8 @@
 						============================================= -->
                         <div class="top-links">
                             <ul class="top-links-container">
-                                <li class="top-links-item"><a href="{{ENV('APP_BE')}}">Mulai berbagi</a></li>
+                                <?php $token = Str::random(16); ?>
+                                <li class="top-links-item"><a href="/{{$token}}/register">Mulai berbagi</a></li>
                             </ul>
                         </div><!-- .top-links end -->
 

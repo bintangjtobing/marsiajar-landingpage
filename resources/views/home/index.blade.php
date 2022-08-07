@@ -279,8 +279,10 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                             {{-- <span>Teach, and share What You Love.</span> --}}
                         </div>
                         <p class="mb-2">Anda berkesempatan untuk mendapatkan penghasilan tambahan dari bahan ajar dan
-                            artikel yang anda buat. Mulai berbagi.</p>
-                        <a href="#" class="button button-rounded button-xlarge ls0 ls0 nott fw-normal m-0">Mulai
+                            artikel yang anda buat.</p>
+                        <?php $token = Str::random(16); ?>
+                        <a href="/{{$token}}/register"
+                            class="button button-rounded button-xlarge ls0 ls0 nott fw-normal m-0">Mulai
                             Berbagi</a>
                     </div>
 
