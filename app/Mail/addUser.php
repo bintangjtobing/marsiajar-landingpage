@@ -32,7 +32,7 @@ class addUser extends Mailable
     {
 
         $string = base64_encode(random_bytes(10));
-        return $this->from('support@marsiajar.com')
+        return $this->from('support@marsiajar.com', 'Support Marsiajar.com')
             ->subject('New account has been registered!')
             ->markdown('emails.addUser');
     }

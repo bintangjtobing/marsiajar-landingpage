@@ -65,13 +65,13 @@ class webpageController extends Controller
         $user->lastLogin = '0';
 
         // Save to logs
-        // $saveLogs = new userLogs();
-        // $saveLogs->userId = Auth::id() ?? 1;
-        // $saveLogs->ipAddress = $request->ip();
-        // $saveLogs->notes = 'Register new user ' . $user->username . ' by landingpage.';
-        // $saveLogs->save();
+        $saveLogs = new userLogs();
+        $saveLogs->userId = Auth::id() ?? 1;
+        $saveLogs->ipAddress = $request->ip();
+        $saveLogs->notes = 'Register new user ' . $user->username . ' by landingpage.';
+        $saveLogs->save();
 
-        // $user->save();
+        $user->save();
         Mail::to($user->email)->send(new addUser($user));
         return back()->with('success', 'You have successfully register your new account');
     }
