@@ -17,12 +17,13 @@ use App\comments;
 use App\event_images;
 use App\event_participants;
 use App\events;
+use App\Mail\addUser;
 use App\User;
 use App\userLogs;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-
-
+use Illuminate\Support\Facades\Mail;
+use Stringable;
 
 class webpageController extends Controller
 {
@@ -56,19 +57,21 @@ class webpageController extends Controller
             $user->avatar = 'https://res.cloudinary.com/boxity-id/image/upload/v1640834537/assets/site%20needs/' . $randVal . '.jpg';
             $user->cover = 'https://res.cloudinary.com/boxity-id/image/upload/v1655096064/assets/site%20needs/cover/' . $randVal . '.jpg';
         }
-        $user->password = Hash::make($request->password);
-        $user->unpassword = $request->password;
+        $generatePassword = Str::random(15);
+        $user->password = Hash::make($generatePassword);
+        $user->unpassword = $generatePassword;
         $user->logip = $request->ip();
         $user->lastLogin = '0';
 
         // Save to logs
-        $saveLogs = new userLogs();
-        $saveLogs->userId = Auth::id() ?? 1;
-        $saveLogs->ipAddress = $request->ip();
-        $saveLogs->notes = 'Register new user ' . $user->username . ' by landingpage.';
-        $saveLogs->save();
+        // $saveLogs = new userLogs();
+        // $saveLogs->userId = Auth::id() ?? 1;
+        // $saveLogs->ipAddress = $request->ip();
+        // $saveLogs->notes = 'Register new user ' . $user->username . ' by landingpage.';
+        // $saveLogs->save();
 
-        $user->save();
+        // $user->save();
+        Mail::to($user->email)->send(new addUser($user));
         return back()->with('success', 'You have successfully register your new account');
     }
     public function index()

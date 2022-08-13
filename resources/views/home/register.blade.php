@@ -55,7 +55,7 @@
                                     <option value="N">Not rather to say</option>
                                 </select>
                             </div>
-                            <div class="col-md-12 form-group">
+                            {{-- <div class="col-md-12 form-group">
                                 <label for="template-contactform-phone">Password</label>
                                 <input type="password" id="template-contactform-phone" name="password" value=""
                                     class="sm-form-control" />
@@ -64,7 +64,7 @@
                                 <label for="template-contactform-phone">Verify Password</label>
                                 <input type="password" id="template-contactform-phone" name="verify-password" value=""
                                     class="sm-form-control" />
-                            </div>
+                            </div> --}}
                             <div class="col-12 form-group">
 
                                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
