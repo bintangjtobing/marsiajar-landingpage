@@ -152,8 +152,7 @@
                             <!-- Top Search
 							============================================= -->
                             <div id="top-search" class="header-misc-icon">
-                                <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i
-                                        class="icon-line-cross"></i></a>
+                                <a href="{{ENV('APP_BE')}}" id=""><i class="icon-sign-in-alt"></i> Sign In</a>
                             </div><!-- #top-search end -->
                         </div>
 
@@ -201,7 +200,7 @@
                                         @endif
                                     </ul>
                                 </li>
-                                <li class="menu-item"><a href="/news" class="menu-link">
+                                <li class="menu-item"><a href="#" class="menu-link">
                                         <div><i class="icon-line-info"></i>Berita</div>
                                     </a>
                                 </li>
