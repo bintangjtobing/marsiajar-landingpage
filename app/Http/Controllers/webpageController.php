@@ -158,15 +158,16 @@ class webpageController extends Controller
         $blogView->save();
 
         // create earnings
-        $blogEarn = new blogEarnings();
-        $blogEarn->earning = 0;
-        $blogEarn->userid = $blogView->userid;
-        $blogEarn->blogid = $blogView->id;
-        $blogEarn->note = 'start';
-        $blogEarn->save();
-
-        // Get earnings
         $earning = blogEarnings::where('blogid', $blogView->id)->with('blog')->first();
+        if (!$earning) {
+            $blogEarn = new blogEarnings();
+            $blogEarn->earning = 0;
+            $blogEarn->userid = $blogView->userid;
+            $blogEarn->blogid = $blogView->id;
+            $blogEarn->note = 'start';
+            $blogEarn->save();
+        }
+        // Get earnings
         $n = $blogView->views;
         $limit = 35;
         $total = 0;
@@ -177,9 +178,15 @@ class webpageController extends Controller
         ) {
             $total += 1;
         }
-        $earning->earning = $total;
-        $earning->note = 'Tambah pendapatan sebanyak ' . $earning->earning;
-        $earning->save();
+        // $earning->earning = $total;
+        // $earning->note = 'Tambah pendapatan sebanyak ' . $earning->earning;
+        // $earning->save();
+        $file = DB::table('blog_earnings')
+            ->where('blogid', $blogView->id)
+            ->update(array(
+                'earning' => $total,
+                'note' => 'Tambah pendapatan sebanyak ' . $total,
+            ));
 
         $article = blog::where('slug', $slug)->with('user', 'image', 'subcategories', 'categories', 'file', 'comments')->first();
         $sub = subCategories::with('image')->get();
