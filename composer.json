@@ -10,7 +10,7 @@
     "require": {
         "php": "^7.2.5|^8.0",
         "anhskohbo/no-captcha": "^3.4",
-        "arcanedev/log-viewer": "7.x",
+        "arcanedev/log-viewer": "~7",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3.1|^7.0.1",

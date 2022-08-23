@@ -7,6 +7,7 @@ use App\blog;
 use App\subCategories;
 use App\categories;
 use App\blogFiles;
+use App\blogEarnings;
 use App\blogImages;
 use App\subCategoriesImages;
 use App\categoriesImages;
@@ -156,10 +157,35 @@ class webpageController extends Controller
         $blogView->views += 1;
         $blogView->save();
 
+        // create earnings
+        $blogEarn = new blogEarnings();
+        $blogEarn->earning = 0;
+        $blogEarn->userid = $blogView->userid;
+        $blogEarn->blogid = $blogView->id;
+        $blogEarn->note = 'start';
+        $blogEarn->save();
+
+        // Get earnings
+        $earning = blogEarnings::where('blogid', $blogView->id)->with('blog')->first();
+        $n = $blogView->views;
+        $limit = 35;
+        $total = 0;
+        for (
+            $n;
+            $n >= $limit;
+            $n -= $limit
+        ) {
+            $total += 1;
+        }
+        $earning->earning = $total;
+        $earning->note = 'Tambah pendapatan sebanyak ' . $earning->earning;
+        $earning->save();
+
         $article = blog::where('slug', $slug)->with('user', 'image', 'subcategories', 'categories', 'file', 'comments')->first();
         $sub = subCategories::with('image')->get();
         // return response()->json($blogView);
         return view('home.read-article', ['blogView' => $blogView, 'article' => $article, 'sub' => $sub]);
+        // return response()->json($earning);
     }
     public function getArticleByTag($slug)
     {
