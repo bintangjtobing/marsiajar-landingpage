@@ -152,7 +152,8 @@
                             <!-- Top Search
 							============================================= -->
                             <div id="top-search" class="header-misc-icon">
-                                <a href="{{ENV('APP_BE')}}" id=""><i class="icon-sign-in-alt"></i> Sign In</a>
+                                <a href="{{ENV('APP_BE')}}" id="" style="width:auto !important;"><i
+                                        class="icon-sign-in-alt" style="left: -25px;"></i> Sign In</a>
                             </div><!-- #top-search end -->
                         </div>
 
@@ -200,7 +201,7 @@
                                         @endif
                                     </ul>
                                 </li>
-                                <li class="menu-item"><a href="#" class="menu-link">
+                                <li class="menu-item"><a href="/news" class="menu-link">
                                         <div><i class="icon-line-info"></i>Berita</div>
                                     </a>
                                 </li>
@@ -258,20 +259,26 @@
                             <a href="#"><i class="icon-line2-envelope me-2"></i>info@marsiajar.com</a>
                         </div>
                         <div class="col-6 col-md-3">
+                            @php
+                            $getPopularClass = DB::table('blogs')->join('users', 'blogs.userid', '=',
+                            'users.id')->select('blogs.*', 'users.name')->where(
+                            'blogs.category',
+                            '!=',
+                            3
+                            )->orderBy(
+                            'views',
+                            'DESC'
+                            )->limit(4)->get();
+                            @endphp
                             <h4 class="text-uppercase ls2 fw-normal">Bahan ajar terpopuler</h4>
                             <ul class="list-unstyled mb-0">
+                                @foreach ($getPopularClass as $class)
                                 <li>
-                                    <h5 class="mb-0"><a href="#" class="text-white">Cooking Classes</a></h5>
-                                    <p>Dylan Meringue</p>
+                                    <h5 class="mb-0"><a href="/read/{{$class->slug}}"
+                                            class="text-white">{{$class->title}}</a></h5>
+                                    <p>{{$class->name}}</p>
                                 </li>
-                                <li>
-                                    <h5 class="mb-0"><a href="#" class="text-white">Learning Spanish</a></h5>
-                                    <p>Gunther Beard</p>
-                                </li>
-                                <li>
-                                    <h5 class="mb-0"><a href="#" class="text-white">Website Development</a></h5>
-                                    <p>Jer Herrys</p>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="col-6 col-md-3 col-sm mt-4 mt-md-0 mt-lg-0 mt-xl-0">

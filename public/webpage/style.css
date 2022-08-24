@@ -3548,10 +3548,10 @@ html[xmlns] .slider-wrap {
 
 #logo img {
     display: block;
-    max-width: 45%;
+    max-width: 40%;
     height: auto;
     object-fit: cover;
-    padding: .5rem 0;
+    padding: 1.5rem 0;
 }
 
 .header-size-sm #header-wrap #logo img {

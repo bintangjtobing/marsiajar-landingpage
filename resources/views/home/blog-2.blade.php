@@ -24,7 +24,7 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                     <!-- Posts
 							============================================= -->
                     <div id="posts" class="row grid-container gutter-40">
-
+                        @if ($blogs->count() > 0)
                         @foreach ($blogs as $blog)
                         <div class="entry col-12">
                             <div class="grid-inner row g-0">
@@ -34,7 +34,7 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                                 </div>
                                 <div class="col-md-8 ps-md-4">
                                     <div class="entry-title title-sm">
-                                        <h2><a href="blog-single.html">{{$blog->title}}</a>
+                                        <h2><a href="/read/{{$blog->slug}}">{{$blog->title}}</a>
                                         </h2>
                                     </div>
                                     <div class="entry-meta">
@@ -45,19 +45,26 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                                                     href="#">{{$blog->categories->categories_name ?? ''}}</a>, <a
                                                     href="#">{{$blog->subcategories->sub_categories_name ?? ''}}</a>
                                             </li>
-                                            <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a>
+                                            <li><a href="#"><i class="icon-comments"></i> 13</a>
                                             </li>
                                             <li><a href="#"><i class="icon-eye"></i> {{$blog->views}} views</a></li>
                                         </ul>
                                     </div>
                                     <div class="entry-content">
                                         {{Str::limit($blog->description, 100)}}
-                                        <a href="#" class="more-link">Read More</a>
+                                        <a href="/read/{{$blog->slug}}" class="more-link">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         @endforeach
+                        @else
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4>No content for general founded!</h4>
+                            </div>
+                        </div>
+                        @endif
 
                     </div><!-- #posts end -->
 

@@ -3,7 +3,6 @@
 @section('page_description', $article->seo_description ?? '')
 @section('page_keywords', '')
 @section('tag_cover',$article->image->file ?? '')
-
 @section('content')
 <section id="page-title">
 
@@ -64,7 +63,7 @@
                             <div class="entry-content mt-0">
                                 {!!$article->description!!}
                                 <!-- Post Single - Content End -->
-                                @if($article->file['files']->count() > 0){
+
                                 <?php $getExt = substr($article->file['files'], -3) ?>
                                 {{-- {{$getExt}} --}}
                                 @if ($getExt == 'pdf')
@@ -76,7 +75,6 @@
                                     src="https://view.officeapps.live.com/op/view.aspx?src={{ENV('APP_BE').'/asset/files/'.$article->file['files']}}"
                                     align="center" height="620" width="100%" frameborder="0" scrolling="auto"></iframe>
                                 @endif
-                                }
                                 <hr>
                                 <!-- Tag Cloud
 										============================================= -->
@@ -236,31 +234,45 @@
                             <!-- Comments List
 									============================================= -->
                             <ol class="commentlist clearfix">
-                                @if($blogView->comments->count() > 0){
+
                                 @foreach ($blogView->comments as $item)
                                 <li class="comment even thread-even depth-1" id="li-comment-1">
+
                                     <div id="comment-1" class="comment-wrap clearfix">
+
                                         <div class="comment-meta">
+
                                             <div class="comment-author vcard">
+
                                                 <span class="comment-avatar clearfix">
                                                     <img alt='Image'
                                                         src='https://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60'
                                                         class='avatar avatar-60 photo avatar-default' height='60'
                                                         width='60' /></span>
+
                                             </div>
+
                                         </div>
+
                                         <div class="comment-content clearfix">
+
                                             <div class="comment-author">{{$item->name}} <span><a href="#"
                                                         title="Permalink to this comment">{{$item->created_at->diffForHumans()}}</a></span>
                                             </div>
+
                                             <p>{{$item->body}}</p>
+
                                             <a class='comment-reply-link' href='#'><i class="icon-reply"></i></a>
+
                                         </div>
+
                                         <div class="clear"></div>
+
                                     </div>
+
                                 </li>
                                 @endforeach
-                                }
+
                             </ol><!-- .commentlist end -->
 
                             <div class="clear"></div>
@@ -320,7 +332,11 @@
                 <div class="sidebar col-lg-3">
                     <div class="sidebar-widgets-wrap">
 
+                        <div class="widget widget-twitter-feed clearfix">
 
+                            {{-- Untuk google ads --}}
+
+                        </div>
                         <div class="widget clearfix">
 
                             <h4>Tag Cloud</h4>
@@ -329,12 +345,6 @@
                                 <a href="/tag/{{$sub->slug}}">{{$sub->sub_categories_name}}</a>
                                 @endforeach
                             </div>
-
-                        </div>
-                        <div class="widget widget-twitter-feed clearfix">
-
-                            {{-- Untuk google ads --}}
-                            <img src="{{asset('webpage/ads/ads-ex.jpg')}}" alt="" class="img-fluid">
 
                         </div>
 

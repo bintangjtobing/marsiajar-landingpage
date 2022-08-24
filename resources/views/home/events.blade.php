@@ -29,7 +29,8 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                                 </div>
                                 <div class="col-md-8 ps-md-4">
                                     <div class="entry-title title-xs">
-                                        <h2><a href="#">{{$event->event_name}}</a></h2>
+                                        <h2><a href="/events/registration/{{$event->slug}}">{{$event->event_name}}</a>
+                                        </h2>
                                     </div>
                                     <div class="entry-meta">
                                         <ul>

@@ -84,7 +84,7 @@ class webpageController extends Controller
     }
     public function news()
     {
-        $blogs = blog::orderBy('created_at', 'desc')->where('status', 1)->with('user', 'image', 'categories', 'subcategories', 'file')->orderBy('views', 'DESC')->paginate(6);
+        $blogs = blog::orderBy('created_at', 'desc')->where('status', 1)->with('user', 'image', 'categories', 'subcategories', 'file')->where('category', 3)->orderBy('views', 'DESC')->paginate(6);
         return view('home.blog-2', ['blogs' => $blogs]);
         // return response()->json($blogs);
     }
@@ -98,8 +98,8 @@ class webpageController extends Controller
     public function getEvents(Request $req, $slug)
     {
         $events = events::where('slug', $slug)->with('user', 'image')->first();
-        return view('home.eventsDetail', ['events' => $events]);
-        // return response()->json($events);
+        // return view('home.eventsDetail', ['events' => $events]);
+        return response()->json($events);
         // dd($job);
     }
     public function getEventsApply($slug)
@@ -192,7 +192,7 @@ class webpageController extends Controller
         $sub = subCategories::with('image')->get();
         // return response()->json($blogView);
         return view('home.read-article', ['blogView' => $blogView, 'article' => $article, 'sub' => $sub]);
-        // return response()->json($earning);
+        // return response()->json($blogView);
     }
     public function getArticleByTag($slug)
     {

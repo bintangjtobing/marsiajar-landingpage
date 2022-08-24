@@ -65,5 +65,6 @@ Route::get('/terms-conditions', 'additionalController@terms');
 Route::get('/privacy-policy', 'additionalController@privacy');
 Route::post('/comments/{slug}', 'webpageController@postComments');
 
+
 // Route::get('/faqs', 'additionalController@faqs');
 // Route::get('/plans', 'additionalController@plans');
