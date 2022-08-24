@@ -64,7 +64,7 @@
                             <div class="entry-content mt-0">
                                 {!!$article->description!!}
                                 <!-- Post Single - Content End -->
-
+                                @if ($article->file)
                                 <?php $getExt = substr($article->file['files'], -3) ?>
                                 @if ($getExt == 'pdf')
                                 <iframe src="{{$article->file['files']}}" align="center" height="620" width="100%"
@@ -76,6 +76,9 @@
                                     align="center" height="620" width="100%" frameborder="0" scrolling="auto"></iframe>
                                 @endif
                                 <hr>
+                                @else
+                                <small class="muted-text">No file attached</small>
+                                @endif
                                 <!-- Tag Cloud
 										============================================= -->
                                 <div class="tagcloud clearfix bottommargin">
