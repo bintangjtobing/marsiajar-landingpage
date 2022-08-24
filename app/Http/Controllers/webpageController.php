@@ -98,8 +98,8 @@ class webpageController extends Controller
     public function getEvents(Request $req, $slug)
     {
         $events = events::where('slug', $slug)->with('user', 'image')->first();
-        // return view('home.eventsDetail', ['events' => $events]);
-        return response()->json($events);
+        return view('home.eventsDetail', ['events' => $events]);
+        // return response()->json($events);
         // dd($job);
     }
     public function getEventsApply($slug)
