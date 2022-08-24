@@ -66,7 +66,6 @@
                                 <!-- Post Single - Content End -->
 
                                 <?php $getExt = substr($article->file['files'], -3) ?>
-                                {{-- {{$getExt}} --}}
                                 @if ($getExt == 'pdf')
                                 <iframe src="{{$article->file['files']}}" align="center" height="620" width="100%"
                                     frameborder="0" scrolling="auto"></iframe>
