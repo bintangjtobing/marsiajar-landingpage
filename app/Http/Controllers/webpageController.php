@@ -153,7 +153,7 @@ class webpageController extends Controller
     }
     public function readArticle($slug)
     {
-        $blogView = blog::where('slug', $slug)->with('user', 'image', 'file', 'comments')->first();
+        $blogView = blog::where('slug', $slug)->with('user', 'image', 'file', 'comments', 'categories', 'subcategories')->first();
         $blogView->views += 1;
         $blogView->save();
 
