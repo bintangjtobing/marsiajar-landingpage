@@ -46,6 +46,8 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                                             <span>Your Number Phone</span>
                                             <input type="text" name="nohp" class="form-control phone"
                                                 placeholder="Phone Number*" required>
+                                            <small class="text-muted">Pastikan nomor yang tertera dapat dihubungi
+                                                melalui whatsapp ataupun panggilan seluler.</small>
                                         </div>
 
                                         <div class="col-md-12 my-2">
