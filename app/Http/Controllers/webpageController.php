@@ -80,6 +80,7 @@ class webpageController extends Controller
     {
         $sub = subCategories::with('image')->get();
         $article = blog::with('user', 'image', 'subcategories', 'categories')->where('status', 1)->orderBy('created_at', 'DESC')->limit(6)->get();
+        // return response()->json($article);
         return view('home.index', ['sub' => $sub, 'article' => $article]);
     }
     public function news()

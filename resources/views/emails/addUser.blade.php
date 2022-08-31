@@ -144,7 +144,7 @@
                                                     <p style="text-align: left;  word-break: break-word;   margin: 0;">
                                                         You have been added to our system, <br>you can now use the
                                                         system by running it on your browser <a
-                                                            href="{{env('APP_BE')}}">{{env('APP_BE')}}</a>
+                                                            href="{{config('app.application_based')}}">{{config('app.application_based')}}</a>
                                                         <br><br>
                                                         by using this credential: <br>
                                                         email: {{$user->email}} <br>

@@ -19,7 +19,7 @@
                     <h3>Register new account</h3>
                     @if (Session::has('success'))
                     <div class="alert alert-success">
-                        <span>You have successfully register your new account! You can <a href="{{ENV('APP_BE')}}">Log
+                        <span>You have successfully register your new account! You can <a href="{{config(app.application_based)}}">Log
                                 In</a> now.</span>
                     </div>
                     @endif

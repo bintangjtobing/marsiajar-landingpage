@@ -152,7 +152,7 @@
                             <!-- Top Search
 							============================================= -->
                             <div id="top-search" class="header-misc-icon">
-                                <a href="{{ENV('APP_BE')}}" id="" style="width:auto !important;"><i
+                                <a href="{{config('app.application_based')}}" id="" style="width:auto !important;"><i
                                         class="icon-sign-in-alt" style="left: -25px;"></i> Sign In</a>
                             </div><!-- #top-search end -->
                         </div>
@@ -285,7 +285,7 @@
                             <h4 class="text-uppercase ls2 fw-normal">Support</h4>
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <h5 class="mb-2 fw-normal"><a href="{{ENV('APP_BE')}}">My Account</a></h5>
+                                    <h5 class="mb-2 fw-normal"><a href="{{config('app.application_based')}}">My Account</a></h5>
                                 </li>
                                 <li>
                                     <h5 class="mb-2 fw-normal"><a href="#">F.a.Q</a></h5>
