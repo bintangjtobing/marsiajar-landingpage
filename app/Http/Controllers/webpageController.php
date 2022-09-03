@@ -35,46 +35,57 @@ class webpageController extends Controller
     }
     public function postRegister(Request $request)
     {
-        $user = new User();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->username = strtolower($request->name);
-        $user->role = 'user';
-        $user->department = 'teacher';
-        $user->status = '1';
-        $user->divisi = 'marsiajar';
-        $user->gender = $request->gender;
-        $user->organisation = 'Marsiajar';
-        $user->phone = $request->phone;
-        if ($user->gender == 'M') {
-            $arr = array(1, 3, 5);
-            shuffle($arr);
-            $randVal = $arr[0];
-            $user->avatar = 'https://res.cloudinary.com/boxity-id/image/upload/v1640834537/assets/site%20needs/' . $randVal . '.jpg';
-            $user->cover = 'https://res.cloudinary.com/boxity-id/image/upload/v1655096064/assets/site%20needs/cover/' . $randVal . '.jpg';
-        } else {
-            $arr = array(2, 4, 6);
-            shuffle($arr);
-            $randVal = $arr[0];
-            $user->avatar = 'https://res.cloudinary.com/boxity-id/image/upload/v1640834537/assets/site%20needs/' . $randVal . '.jpg';
-            $user->cover = 'https://res.cloudinary.com/boxity-id/image/upload/v1655096064/assets/site%20needs/cover/' . $randVal . '.jpg';
+        $getUser = User::where('email', $request->email)->orWhere('name', $request->name)->first();
+        if (!$getUser) {
+            // User not found
+            $user = new User();
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->username = strtolower($request->name);
+            $user->role = 'user';
+            $user->department = 'teacher';
+            $user->status = '1';
+            $user->divisi = 'marsiajar';
+            $user->gender = $request->gender;
+            $user->organisation = 'Marsiajar';
+            $user->phone = $request->phone;
+            if ($user->gender == 'M') {
+                $arr = array(
+                    1, 3, 5
+                );
+                shuffle($arr);
+                $randVal = $arr[0];
+                $user->avatar = 'https://res.cloudinary.com/boxity-id/image/upload/v1640834537/assets/site%20needs/' . $randVal . '.jpg';
+                $user->cover = 'https://res.cloudinary.com/boxity-id/image/upload/v1655096064/assets/site%20needs/cover/' . $randVal . '.jpg';
+            } else {
+                $arr = array(
+                    2, 4, 6
+                );
+                shuffle($arr);
+                $randVal = $arr[0];
+                $user->avatar = 'https://res.cloudinary.com/boxity-id/image/upload/v1640834537/assets/site%20needs/' . $randVal . '.jpg';
+                $user->cover = 'https://res.cloudinary.com/boxity-id/image/upload/v1655096064/assets/site%20needs/cover/' . $randVal . '.jpg';
+            }
+            $generatePassword = Str::random(15);
+            $user->password = Hash::make($generatePassword);
+            $user->unpassword = $generatePassword;
+            $user->logip = $request->ip();
+            $user->lastLogin = '0';
+
+            // Save to logs
+            $saveLogs = new userLogs();
+            $saveLogs->userId = Auth::id() ?? 1;
+            $saveLogs->ipAddress = $request->ip();
+            $saveLogs->notes = 'Register new user ' . $user->username . ' by landingpage.';
+            $saveLogs->save();
+
+            $user->save();
+            Mail::to($user->email)->send(new addUser($user));
+            return back()->with('success', 'You have successfully register your new account');
         }
-        $generatePassword = Str::random(15);
-        $user->password = Hash::make($generatePassword);
-        $user->unpassword = $generatePassword;
-        $user->logip = $request->ip();
-        $user->lastLogin = '0';
-
-        // Save to logs
-        $saveLogs = new userLogs();
-        $saveLogs->userId = Auth::id() ?? 1;
-        $saveLogs->ipAddress = $request->ip();
-        $saveLogs->notes = 'Register new user ' . $user->username . ' by landingpage.';
-        $saveLogs->save();
-
-        $user->save();
-        Mail::to($user->email)->send(new addUser($user));
-        return back()->with('success', 'You have successfully register your new account');
+        if ($getUser) {
+            return back()->with('userExist', 'You cannot register with the same email or username or name ' . $request->name . '. Please login with that email ' . $request->email . '. And if you forgot the password, you should contact admin.');
+        }
     }
     public function index()
     {

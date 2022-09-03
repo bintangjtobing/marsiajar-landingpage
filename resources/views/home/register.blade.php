@@ -23,6 +23,11 @@
                             In now.</span>
                     </div>
                     @endif
+                    @if (Session::has('userExist'))
+                    <div class="alert alert-danger">
+                        <span>{{Session::get('userExist')}}</span>
+                    </div>
+                    @endif
                     <div class="">
 
                         <?php $token = Str::random(16); ?>
