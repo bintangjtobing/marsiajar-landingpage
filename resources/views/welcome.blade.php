@@ -20,10 +20,12 @@
     <link rel="stylesheet" href="{!!asset('webpage/css/custom.css?'.rand(10000,99999))!!}" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="{!!asset('webpage/css/colors.php')!!}?color=24a693" type="text/css" />
-    <link rel="stylesheet" href="{!!asset('webpage/demos/course/css/fonts.css?'.rand(10000,99999))!!}" type="text/css" />
+    <link rel="stylesheet" href="{!!asset('webpage/demos/course/css/fonts.css?'.rand(10000,99999))!!}"
+        type="text/css" />
     <link rel="stylesheet" href="{!!asset('webpage/demos/course/course.css?'.rand(10000,99999))!!}" type="text/css" />
     <link rel="shortcut icon" href="{!!asset('webpage/demos/marsiajar/logo.ico')!!}" type="image/x-icon">
-    <link rel="stylesheet" href="{!!asset('webpage/css/components/bs-rating.css?'.rand(10000,99999))!!}" type="text/css" />
+    <link rel="stylesheet" href="{!!asset('webpage/css/components/bs-rating.css?'.rand(10000,99999))!!}"
+        type="text/css" />
     <script src="https://kit.fontawesome.com/98c197c895.js" crossorigin="anonymous"></script>
 
     <!-- Document Description
@@ -285,13 +287,15 @@
                             <h4 class="text-uppercase ls2 fw-normal">Support</h4>
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <h5 class="mb-2 fw-normal"><a href="{{config('app.application_based')}}">My Account</a></h5>
+                                    <h5 class="mb-2 fw-normal"><a href="{{config('app.application_based')}}">My
+                                            Account</a></h5>
                                 </li>
                                 <li>
                                     <h5 class="mb-2 fw-normal"><a href="#">F.a.Q</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="mb-2 fw-normal"><a href="#">Become an educators</a></h5>
+                                    <h5 class="mb-2 fw-normal"><a href="/{{$token}}/register">Become an educators</a>
+                                    </h5>
                                 </li>
                                 <li>
                                     <h5 class="mb-2 fw-normal"><a href="/contact-us">Contact</a></h5>
