@@ -24,7 +24,7 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                                     <a href="#" class="entry-image">
                                         <img src="{{$event->image->file}}"
                                             alt="Inventore voluptates velit totam ipsa tenetur">
-                                        <div class="entry-date">10 <span>Apr</span></div>
+                                        {{-- <div class="entry-date">10 <span>Apr</span></div> --}}
                                     </a>
                                 </div>
                                 <div class="col-md-8 ps-md-4">

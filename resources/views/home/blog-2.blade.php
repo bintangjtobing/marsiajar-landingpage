@@ -51,7 +51,7 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                                         </ul>
                                     </div>
                                     <div class="entry-content">
-                                        {{Str::limit($blog->description, 100)}}
+                                        {{strip_tags(Str::limit($blog->description, 100))}}
                                         <a href="/read/{{$blog->slug}}" class="more-link">Read More</a>
                                     </div>
                                 </div>
