@@ -68,6 +68,10 @@ class User extends Authenticatable
     {
         return $query->where('telegram_id', '!=', null);
     }
+    public function blog()
+    {
+        return $this->belongsTo(blog::class, 'id', 'userid');
+    }
     /**
      * Enter your own logic (e.g. if ($this->id === 1) to
      *   enable this user to be able to add/edit blog posts

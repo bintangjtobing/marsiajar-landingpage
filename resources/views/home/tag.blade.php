@@ -54,7 +54,7 @@
                                         <i class="icon-eye"></i>
                                         <sup>{{$item->views}}</sup>
                                         <i class="icon-comments-alt" style="margin-left: 10px;"></i>
-                                        <sup>250</sup></a>
+                                        <sup>{{$item->comments->count()}}</sup></a>
                                 </div>
                             </div>
                         </div>

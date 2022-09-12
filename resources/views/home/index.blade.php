@@ -144,7 +144,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                     <i class="icon-eye"></i>
                                     <sup>{{$item->views}}</sup>
                                     <i class="icon-comments-alt" style="margin-left: 10px;"></i>
-                                    <sup>250</sup></a>
+                                    <sup>{{$item->comments->count()}}</sup></a>
                             </div>
                         </div>
                     </div>
@@ -181,82 +181,26 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 
                     <!-- Instructors 1
 							============================================= -->
+                    @foreach ($creator as $creators)
                     <div class="col-lg-3 col-sm-6 mb-4">
                         <div
                             class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-lg fbox-effect">
                             <div class="fbox-icon">
-                                <i><img src="{!!asset('webpage/demos/course/images/instructor/1.jpg')!!}""
-                                                class=" border-0 bg-transparent shadow-sm" style="z-index: 2;"
-                                        alt="Image"></i>
+                                <i><img src="{{$creators->avatar ?? 'https://res.cloudinary.com/boxity-id/image/upload/v1640834537/assets/site%20needs/3.jpg'}}"
+                                        class=" border-0 bg-transparent shadow-sm" style="z-index: 2;" alt="Image"></i>
                             </div>
                             <div class="fbox-content">
-                                <h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Dylan
-                                        Abal</a><br><small class="subtitle nott color">Guru SDN 001122</small>
+                                <h3 class="mb-4 nott ls0"><a href="#"
+                                        class="text-dark">{{$creators->name}}</a><br><small
+                                        class="subtitle nott color">{{$creators->bio ?? ''}}</small>
                                 </h3>
                                 <p class="text-dark">⭐⭐⭐⭐⭐</p>
-                                <p class="text-dark mt-0"><strong>23</strong> Teaching Materials</p>
+                                <p class="text-dark mt-0"><strong>{{$creators->blog_count}}</strong> Teaching Materials
+                                </p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Instructors 2
-							============================================= -->
-                    <div class="col-lg-3 col-sm-6 mb-4">
-                        <div
-                            class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-lg fbox-effect">
-                            <div class="fbox-icon">
-                                <i><img src="{!!asset('webpage/demos/course/images/instructor/2.jpg')!!}""
-                                                class=" border-0 bg-transparent shadow-sm" style="z-index: 2;"
-                                        alt="Image"></i>
-                            </div>
-                            <div class="fbox-content">
-                                <h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Alan
-                                        Francis</a><br><small class="subtitle nott color">Development IT,
-                                        Guru</small></h3>
-                                <p class="text-dark">⭐⭐⭐⭐</p>
-                                <p class="text-dark mt-0"><strong>29</strong> Teaching Materials</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Instructors 3
-							============================================= -->
-                    <div class="col-lg-3 col-sm-6 mb-4">
-                        <div
-                            class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-lg fbox-effect">
-                            <div class="fbox-icon">
-                                <i><img src="{!!asset('webpage/demos/course/images/instructor/3.jpg')!!}""
-                                                class=" border-0 bg-transparent shadow-sm" style="z-index: 2;"
-                                        alt="Image"></i>
-                            </div>
-                            <div class="fbox-content">
-                                <h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Herry
-                                        Tander</a><br><small class="subtitle nott color">TIK Master</small></h3>
-                                <p class="text-dark">⭐⭐⭐⭐</p>
-                                <p class="text-dark mt-0"><strong>11</strong> Teaching Materials</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Instructors 4
-							============================================= -->
-                    <div class="col-lg-3 col-sm-6 mb-4">
-                        <div
-                            class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-lg fbox-effect">
-                            <div class="fbox-icon">
-                                <i><img src="{!!asset('webpage/demos/course/images/instructor/4.jpg')!!}""
-                                                class=" border-0 bg-transparent shadow-sm" style="z-index: 2;"
-                                        alt="Image"></i>
-                            </div>
-                            <div class="fbox-content">
-                                <h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Desmond
-                                        Cato</a><br><small class="subtitle nott color">Sistem Analisis
-                                        Master</small></h3>
-                                <p class="text-dark">⭐⭐⭐⭐</p>
-                                <p class="text-dark mt-0"><strong>12</strong> Teaching Materials</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

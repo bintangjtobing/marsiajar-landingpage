@@ -90,9 +90,10 @@ class webpageController extends Controller
     public function index()
     {
         $sub = subCategories::with('image')->get();
-        $article = blog::with('user', 'image', 'subcategories', 'categories')->where('status', 1)->orderBy('created_at', 'DESC')->limit(6)->get();
-        // return response()->json($article);
-        return view('home.index', ['sub' => $sub, 'article' => $article]);
+        $article = blog::with('user', 'image', 'subcategories', 'categories', 'comments')->where('status', 1)->orderBy('created_at', 'DESC')->limit(6)->get();
+        $creator = User::withCount('blog')->orderBy('blog_count', 'DESC')->limit(4)->get();
+        // return response()->json($creator);
+        return view('home.index', ['sub' => $sub, 'article' => $article, 'creator' => $creator]);
     }
     public function news()
     {
@@ -154,7 +155,7 @@ class webpageController extends Controller
     public function eduCategories($slug)
     {
         $categories = categories::where('slug', $slug)->first();
-        $blog = blog::with('user', 'image', 'subcategories', 'categories', 'image')->orderBy('created_at', 'DESC')->where('category', $categories->id)->get();
+        $blog = blog::with('user', 'image', 'subcategories', 'categories', 'image', 'comments')->orderBy('created_at', 'DESC')->where('category', $categories->id)->get();
         $subcategories = subCategories::all();
         return view('home.bahan-ajar', ['categories' => $categories, 'blog' => $blog, 'subcategories' => $subcategories]);
         // return response()->json($blog);
@@ -210,7 +211,7 @@ class webpageController extends Controller
     {
         $sub = subCategories::where('slug', $slug)->first();
         $cat = categories::all();
-        $blog = blog::with('user', 'image', 'subcategories', 'categories', 'image')->orderBy('created_at', 'DESC')->where('subcategory', $sub->id)->get();
+        $blog = blog::with('user', 'image', 'subcategories', 'categories', 'image', 'comments')->orderBy('created_at', 'DESC')->where('subcategory', $sub->id)->get();
         // return response()->json($blog);
         return view('home.tag', ['blog' => $blog, 'sub' => $sub, 'cat' => $cat]);
     }
