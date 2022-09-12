@@ -29,6 +29,7 @@
                     <!-- Shop
 							============================================= -->
                     <div id="shop" class="shop row grid-container gutter-30" data-layout="fitRows">
+                        @if ($blog->count() > 0)
                         @foreach ($blog as $item)
                         <div class="col-sm-6 col-12 mb-5">
                             <div class="card course-card hover-effect border-0">
@@ -38,26 +39,35 @@
                                     <h4 class="card-title fw-bold mb-2"><a
                                             href="/read/{{$item->slug}}">{{$item->title}}</a></h4>
                                     <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
-                                            class="text-black-50">{{$item->subcategories->sub_categories_name}}</a>
+                                            class="text-black-50">{{$item->subcategories['sub_categories_name']}}</a>
                                     </p>
                                     <div class="rating-stars mb-2"><i class="icon-star3"></i><i
                                             class="icon-star3"></i><i class="icon-star3"></i><i
                                             class="icon-star3"></i><i class="icon-star-half-full"></i>
                                         <span>4.7</span></div>
-                                    <p class="card-text text-black-50 mb-1"> {{Str::limit($item->description, 50)}}</p>
+                                    <p class="card-text text-black-50 mb-1">
+                                        {{strip_tags(Str::limit($item->description, 50))}}</p>
                                 </div>
                                 <div
                                     class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                     <div class="badge alert-success">Free</div>
                                     <a href="#" class="text-dark position-relative">
-                                        <i class="far fa-eye"></i>
+                                        <i class="icon-eye"></i>
                                         <sup>{{$item->views}}</sup>
-                                        <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
+                                        <i class="icon-comments-alt" style="margin-left: 10px;"></i>
                                         <sup>250</sup></a>
                                 </div>
                             </div>
                         </div>
                         @endforeach
+                        @else
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <span>No data added to this educative material.</span>
+                            </div>
+                        </div>
+                        @endif
+
                     </div><!-- #shop end -->
 
                 </div><!-- .postcontent end -->

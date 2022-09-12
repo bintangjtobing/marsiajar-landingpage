@@ -37,7 +37,7 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                             <div class="post-author">
                                 <h6 class="h6-xl">{{$blogs->user->name}}</h6>
                                 <p class="p-md">Posted on {{  date('M d, Y', strtotime($blogs->created_at)) }} | <i
-                                        class="far fa-eye"></i> {{$blogs->views}} views</p>
+                                        class="icon-eye"></i> {{$blogs->views}} views</p>
                             </div>
 
                         </div> <!-- END POST DATA -->

@@ -50,9 +50,9 @@
                                     class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                     <div class="badge alert-success">Free</div>
                                     <a href="#" class="text-dark position-relative">
-                                        <i class="far fa-eye"></i>
+                                        <i class="icon-eye"></i>
                                         <sup>{{$item->views}}</sup>
-                                        <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
+                                        <i class="icon-comments-alt" style="margin-left: 10px;"></i>
                                         <sup>250</sup></a>
                                 </div>
                             </div>

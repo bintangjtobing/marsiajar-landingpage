@@ -54,9 +54,9 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                     class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                     <div class="badge alert-success">Free</div>
                                     <a href="#" class="text-dark position-relative">
-                                        <i class="far fa-eye"></i>
+                                        <i class="icon-eye"></i>
                                         <sup>1,190</sup>
-                                        <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
+                                        <i class="icon-comments-alt" style="margin-left: 10px;"></i>
                                         <sup>250</sup></a>
                                 </div>
                             </div>
@@ -85,9 +85,9 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                     class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                     <div class="badge alert-success">Free</div>
                                     <a href="#" class="text-dark position-relative">
-                                        <i class="far fa-eye"></i>
+                                        <i class="icon-eye"></i>
                                         <sup>1,134</sup>
-                                        <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
+                                        <i class="icon-comments-alt" style="margin-left: 10px;"></i>
                                         <sup>115</sup></a>
                                 </div>
                             </div>
@@ -117,9 +117,9 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                     class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                     <div class="badge alert-success">Free</div>
                                     <a href="#" class="text-dark position-relative">
-                                        <i class="far fa-eye"></i>
+                                        <i class="icon-eye"></i>
                                         <sup>987</sup>
-                                        <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
+                                        <i class="icon-comments-alt" style="margin-left: 10px;"></i>
                                         <sup>99</sup></a>
                                 </div>
                             </div>
@@ -148,9 +148,9 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                     class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                     <div class="badge alert-primary">210K</div>
                                     <a href="#" class="text-dark position-relative">
-                                        <i class="far fa-eye"></i>
+                                        <i class="icon-eye"></i>
                                         <sup>769</sup>
-                                        <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
+                                        <i class="icon-comments-alt" style="margin-left: 10px;"></i>
                                         <sup>56</sup></a>
                                 </div>
                             </div>
@@ -179,9 +179,9 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                     class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                     <div class="badge alert-primary">600K</div>
                                     <a href="#" class="text-dark position-relative">
-                                        <i class="far fa-eye"></i>
+                                        <i class="icon-eye"></i>
                                         <sup>533</sup>
-                                        <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
+                                        <i class="icon-comments-alt" style="margin-left: 10px;"></i>
                                         <sup>44</sup></a>
                                 </div>
                             </div>
@@ -211,9 +211,9 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                     class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                     <div class="badge alert-primary">400K</div>
                                     <a href="#" class="text-dark position-relative">
-                                        <i class="far fa-eye"></i>
+                                        <i class="icon-eye"></i>
                                         <sup>380</sup>
-                                        <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
+                                        <i class="icon-comments-alt" style="margin-left: 10px;"></i>
                                         <sup>24</sup></a>
                                 </div>
                             </div>

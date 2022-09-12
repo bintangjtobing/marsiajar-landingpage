@@ -45,8 +45,8 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                             <li><a href="#"><i class="icon-user"></i> Heri Siregar</a></li>
                             <li><i class="icon-folder-open"></i> <a href="#">Semester</a>, <a href="#">Matematika</a>
                             </li>
-                            <li><a href="#"><i class="far fa-eye"></i> 43 Views</a></li>
-                            <li><a href="#"><i class="far fa-arrow-down-to-line"></i> 8 Downloads</a></li>
+                            <li><a href="#"><i class="icon-eye"></i> 43 Views</a></li>
+                            <li><a href="#"><i class="icon-comments-alt"></i> 8 Downloads</a></li>
                             <li><a href="#"><i class="icon-comments"></i> 43 Comments</a></li>
                         </ul>
                     </div><!-- .entry-meta end -->

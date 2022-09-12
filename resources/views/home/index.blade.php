@@ -134,15 +134,16 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                                         class="icon-star3"></i><i class="icon-star3"></i><i
                                         class="icon-star-half-full"></i>
                                     <span>4.7</span></div>
-                                <p class="card-text text-black-50 mb-1">{{Str::limit($item->description, 60)}}</p>
+                                <p class="card-text text-black-50 mb-1">
+                                    {{strip_tags(Str::limit($item->description, 60))}}</p>
                             </div>
                             <div
                                 class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
                                 <div class="badge alert-success">Free</div>
                                 <a href="#" class="text-dark position-relative">
-                                    <i class="far fa-eye"></i>
+                                    <i class="icon-eye"></i>
                                     <sup>{{$item->views}}</sup>
-                                    <i class="far fa-arrow-down-to-line" style="margin-left: 10px;"></i>
+                                    <i class="icon-comments-alt" style="margin-left: 10px;"></i>
                                     <sup>250</sup></a>
                             </div>
                         </div>
