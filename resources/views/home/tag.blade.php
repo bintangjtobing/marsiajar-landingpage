@@ -44,7 +44,8 @@
                                             class="icon-star3"></i><i class="icon-star3"></i><i
                                             class="icon-star3"></i><i class="icon-star-half-full"></i>
                                         <span>4.7</span></div>
-                                    <p class="card-text text-black-50 mb-1"> {{Str::limit($item->description, 50)}}</p>
+                                    <p class="card-text text-black-50 mb-1">
+                                        {{strip_tags(Str::limit($item->description, 50))}}</p>
                                 </div>
                                 <div
                                     class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted">
