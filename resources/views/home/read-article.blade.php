@@ -63,6 +63,16 @@
 									============================================= -->
                             <div class="entry-content mt-0">
                                 {!!$article->description!!}
+                                <script async
+                                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094195033921594"
+                                    crossorigin="anonymous"></script>
+                                <ins class="adsbygoogle" style="display:block; text-align:center;"
+                                    data-ad-layout="in-article" data-ad-format="fluid"
+                                    data-ad-client="ca-pub-7094195033921594" data-ad-slot="6470438497"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+
+                                </script>
                                 <!-- Post Single - Content End -->
                                 @if ($article->file)
                                 <?php $getExt = substr($article->file['files'], -3) ?>
@@ -89,6 +99,21 @@
                                 </div><!-- .tagcloud end -->
 
                                 <div class="clear"></div>
+                                <div class="widget widget_links clearfix">
+
+                                    <script async
+                                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094195033921594"
+                                        crossorigin="anonymous"></script>
+                                    <!-- footer_ad -->
+                                    <ins class="adsbygoogle" style="display:block"
+                                        data-ad-client="ca-pub-7094195033921594" data-ad-slot="9302956715"
+                                        data-ad-format="auto" data-full-width-responsive="true"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+
+                                    </script>
+
+                                </div>
 
                                 <!-- Post Single - Share
 										============================================= -->

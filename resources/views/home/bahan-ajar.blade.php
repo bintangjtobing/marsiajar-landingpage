@@ -97,6 +97,20 @@
                             </ul>
 
                         </div>
+                        <div class="widget widget_links clearfix">
+
+                            <script async
+                                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094195033921594"
+                                crossorigin="anonymous"></script>
+                            <!-- header_content -->
+                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7094195033921594"
+                                data-ad-slot="6406520006" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+
+                            </script>
+
+                        </div>
                         <div class="widget clearfix">
                             <iframe
                                 src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fboxity-central-indonesia&amp;width=240&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=499481203443583"
