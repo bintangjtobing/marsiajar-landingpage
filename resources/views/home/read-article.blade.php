@@ -361,7 +361,16 @@
 						============================================= -->
                 <div class="sidebar col-lg-3">
                     <div class="sidebar-widgets-wrap">
+                        <div class="widget clearfix">
 
+                            <h4>Tag Cloud</h4>
+                            <div class="tagcloud">
+                                @foreach ($sub as $sub)
+                                <a href="/tag/{{$sub->slug}}">{{$sub->sub_categories_name}}</a>
+                                @endforeach
+                            </div>
+
+                        </div>
                         <div class="widget widget-twitter-feed clearfix">
 
 
@@ -376,16 +385,6 @@
 
                             </script>
 
-
-                        </div>
-                        <div class="widget clearfix">
-
-                            <h4>Tag Cloud</h4>
-                            <div class="tagcloud">
-                                @foreach ($sub as $sub)
-                                <a href="/tag/{{$sub->slug}}">{{$sub->sub_categories_name}}</a>
-                                @endforeach
-                            </div>
 
                         </div>
 
