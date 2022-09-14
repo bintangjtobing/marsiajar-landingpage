@@ -65,6 +65,21 @@
     <meta name="og:postal-code" content="20134" />
     <meta name="og:country-name" content="Indonesia" />
 
+
+    {{-- Google analytics and others --}}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVJZM22LL0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CVJZM22LL0');
+
+    </script>
 </head>
 
 <body class="stretched">
