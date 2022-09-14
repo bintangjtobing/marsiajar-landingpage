@@ -28,6 +28,10 @@
         type="text/css" />
     <script src="https://kit.fontawesome.com/98c197c895.js" crossorigin="anonymous"></script>
 
+    {{-- adsense --}}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094195033921594"
+        crossorigin="anonymous"></script>
+
     <!-- Document Description
 	============================================= -->
     <title>Marsiajar - @yield('title')</title>
