@@ -377,9 +377,9 @@
                             <script async
                                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094195033921594"
                                 crossorigin="anonymous"></script>
-                            <!-- header_content -->
+                            <!-- read-article-section -->
                             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7094195033921594"
-                                data-ad-slot="6406520006" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                                data-ad-slot="9458805311" data-ad-format="auto" data-full-width-responsive="true"></ins>
                             <script>
                                 (adsbygoogle = window.adsbygoogle || []).push({});
 
