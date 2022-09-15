@@ -7,11 +7,11 @@
 <section id="page-title">
 
     <div class="container clearfix">
-        <h1>{{$article->title}}</h1>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{$article->title}}</li>
-        </ol>
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>{{$article->title}}</h1>
+            </div>
+        </div>
     </div>
 
 </section><!-- #page-title end -->
