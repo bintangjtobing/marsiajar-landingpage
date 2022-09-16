@@ -63,16 +63,6 @@
 									============================================= -->
                             <div class="entry-content mt-0">
                                 {!!$article->description!!}
-                                <script async
-                                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094195033921594"
-                                    crossorigin="anonymous"></script>
-                                <ins class="adsbygoogle" style="display:block; text-align:center;"
-                                    data-ad-layout="in-article" data-ad-format="fluid"
-                                    data-ad-client="ca-pub-7094195033921594" data-ad-slot="6470438497"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-
-                                </script>
                                 <!-- Post Single - Content End -->
                                 @if ($article->file)
                                 <?php $getExt = substr($article->file['files'], -3) ?>
@@ -89,6 +79,7 @@
                                 @else
                                 <small class="muted-text">No file attached</small>
                                 @endif
+
                                 <!-- Tag Cloud
 										============================================= -->
                                 <div class="tagcloud clearfix bottommargin">
