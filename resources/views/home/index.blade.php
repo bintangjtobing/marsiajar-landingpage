@@ -17,12 +17,12 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                         <div class="slider-title mb-5 dark clearfix">
                             <h2 class="text-white text-rotater mb-2" data-separator="," data-rotate="fadeIn"
                                 data-speed="3500">Selamat datang di Marsiajar.</h2>
-                            <p class="lead mb-0 text-uppercase ls2" style="color: #CCC; font-size: 110%">Mari
-                                berkolaborasi dengan pendidik lainnya.</p>
+                            <p class="lead mb-0 text-uppercase ls2" style="color: #CCC; font-size: 110%">Berkolaborasi
+                                dengan pendidik kreator lainnya.</p>
                             <hr>
-                            <span>Marsiajar adalah platform bagi para pendidik untuk saling berkolaborasi, serta
-                                memberi kesempatan kepada pendidik Kreator untuk mendapatkan penghasilan tambahan
-                                dari bahan ajar yang mereka buat.</span>
+                            <span>Marsiajar adalah platform bagi para pendidik kreator untuk saling berkolaborasi, serta
+                                memberi kesempatan untuk mendapatkan penghasilan tambahan dari bahan ajar yang
+                                dibuat.</span>
                         </div>
                     </div>
                 </div>
@@ -56,9 +56,8 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
         <div class="container">
 
             <div class="heading-block border-bottom-0 my-4 center">
-                <h3>Temukan bahan ajar yang anda butuhkan</h3>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus mollitia ipsum.
-                    Voluptatibus, perspiciatis placeat.</span>
+                <h3>Kategori Bahan Ajar</h3>
+                <span>Cari dan temukan bahan ajar yang anda butuhkan di setiap kategori.</span>
             </div>
 
             <!-- Categories
@@ -171,8 +170,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 
                 <div class="heading-block border-bottom-0 mb-5 center">
                     <h3>Pendidik Kreator terpopuler</h3>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus mollitia ipsum.
-                        Voluptatibus, perspiciatis placeat.</span>
+                    <span>Guru kreator terpopuler merupakan para pendidik yang memiliki view paling tinggi.</span>
                 </div>
 
                 <div class="clear"></div>

@@ -13,7 +13,6 @@ WMS, boxity financial, boxity indonesia, news from boxity')
 
             <div class="heading-block center">
                 <h1>Berita Terbaru</h1>
-                <span>We almost blog regularly about this &amp; that.</span>
             </div>
 
             <div class="row gutter-40 col-mb-80">
