@@ -205,7 +205,7 @@
                         </div>
                         @php
                         $getCategories = DB::table('categories')->orderBy('created_at',
-                        'DESC')->where('categories_name', '!=', 'Umum')->get();
+                        'DESC')->where('slug', '!=', 'umum' || 'slug','!=','berita')->get();
                         @endphp
                         <!-- Primary Navigation
 						============================================= -->
