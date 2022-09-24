@@ -43,7 +43,7 @@
                                     <li><i class="icon-calendar3"></i> {{$article->created_at}}</li>
                                     <li><a href="#"><i class="icon-user"></i> {{$article->user->name}}</a></li>
                                     <li><i class="icon-folder-open"></i> <a
-                                            href="/educative/{{$article->categories->slug}}">{{$article->categories->categories_name}}</a>,
+                                            href="/educative/{{$article['categories']['slug']}}">{{$article->categories->categories_name}}</a>,
                                         <a
                                             href="/tag/{{$article->subcategories->slug}}">{{$article->subcategories->sub_categories_name}}</a>
                                     </li>
