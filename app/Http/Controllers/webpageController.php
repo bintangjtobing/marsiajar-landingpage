@@ -204,8 +204,8 @@ class webpageController extends Controller
         $article = blog::where('slug', $slug)->with('user', 'image', 'subcategories', 'categories', 'file', 'comments')->first();
         $sub = subCategories::with('image')->get();
         // return response()->json($blogView);
-        // return view('home.read-article', ['blogView' => $blogView, 'article' => $article, 'sub' => $sub]);
-        return response()->json($article);
+        return view('home.read-article', ['blogView' => $blogView, 'article' => $article, 'sub' => $sub]);
+        // return response()->json($article);
     }
     public function getArticleByTag($slug)
     {

@@ -31,10 +31,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/instagram', function () {
-    return Redirect::to('http://www.instagram.com/');
+    return Redirect::to('http://www.instagram.com/marsiajar');
 });
 Route::get('/facebook', function () {
-    return Redirect::to('http://www.facebook.com/');
+    return Redirect::to('http://www.facebook.com/Marsiajaran');
 });
 
 $token = Str::random(16);
