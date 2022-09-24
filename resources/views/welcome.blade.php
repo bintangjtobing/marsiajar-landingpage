@@ -147,7 +147,7 @@
                             <li><a href="/instagram" class="si-instagram"><span class="ts-icon"><i
                                             class="icon-instagram2"></i></span><span
                                         class="ts-text">Instagram</span></a></li>
-                            <li><a href="tel:+6285159935864" class="si-call"><span class="ts-icon"><i
+                            <li><a href="https://wa.me/6285159935864" class="si-call" target="_blank"><span class="ts-icon"><i
                                             class="icon-call"></i></span><span class="ts-text">+62851599358648</span></a>
                             </li>
                             <li><a href="mailto:info@marsiajar.com" class="si-email3"><span class="ts-icon"><i
