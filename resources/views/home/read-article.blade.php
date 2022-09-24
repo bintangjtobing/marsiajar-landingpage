@@ -43,9 +43,9 @@
                                     <li><i class="icon-calendar3"></i> {{$article->created_at}}</li>
                                     <li><a href="#"><i class="icon-user"></i> {{$article->user->name}}</a></li>
                                     <li><i class="icon-folder-open"></i> <a
-                                            href="/educative/{{$article->categories->slug}}">{{$article->categories->categories_name}}</a>,
+                                            href="/educative/{{$article->categories['slug']}}">{{$article->categories->categories_name}}</a>,
                                         <a
-                                            href="/tag/{{$article->subcategories->slug}}">{{$article->subcategories->sub_categories_name}}</a>
+                                            href="/tag/{{$article->subcategories['slug']}}">{{$article->subcategories->sub_categories_name}}</a>
                                     </li>
                                     <li><a href="#"><i class="icon-comments"></i> {{$blogView->comments->count()}}
                                             Comments</a></li>
@@ -83,9 +83,9 @@
                                 <!-- Tag Cloud
 										============================================= -->
                                 <div class="tagcloud clearfix bottommargin">
-                                    <a href="/tag/{{$article->subcategories->slug}}">{{$article->subcategories->sub_categories_name ?? ''}}
+                                    <a href="/tag/{{$article->subcategories['slug']}}">{{$article->subcategories->sub_categories_name ?? ''}}
                                     </a>
-                                    <a href="/educative/{{$article->categories->slug}}">{{$article->categories->categories_name ?? ''}}
+                                    <a href="/educative/{{$article->categories['slug']}}">{{$article->categories->categories_name ?? ''}}
                                     </a>
                                 </div><!-- .tagcloud end -->
 
@@ -309,7 +309,7 @@
                                         successfully give a comment to this article.</div>
                                 </div>
                                 @endif
-                                <form class="row" action="/comments/{{$article->slug}}" method="post" id="commentform">
+                                <form class="row" action="/comments/{{$article['slug']}}" method="post" id="commentform">
                                     @csrf
                                     <div class="col-md-6 form-group">
                                         <label for="author">Name</label>
@@ -357,7 +357,7 @@
                             <h4>Tag Cloud</h4>
                             <div class="tagcloud">
                                 @foreach ($sub as $sub)
-                                <a href="/tag/{{$sub->slug}}">{{$sub->sub_categories_name}}</a>
+                                <a href="/tag/{{$sub['slug']}}">{{$sub->sub_categories_name}}</a>
                                 @endforeach
                             </div>
 
