@@ -147,8 +147,8 @@
                             <li><a href="/instagram" class="si-instagram"><span class="ts-icon"><i
                                             class="icon-instagram2"></i></span><span
                                         class="ts-text">Instagram</span></a></li>
-                            <li><a href="tel:+6281234567" class="si-call"><span class="ts-icon"><i
-                                            class="icon-call"></i></span><span class="ts-text">+62812345678</span></a>
+                            <li><a href="tel:+6285159935864" class="si-call"><span class="ts-icon"><i
+                                            class="icon-call"></i></span><span class="ts-text">+62851599358648</span></a>
                             </li>
                             <li><a href="mailto:info@marsiajar.com" class="si-email3"><span class="ts-icon"><i
                                             class="icon-envelope-alt"></i></span><span
@@ -290,8 +290,8 @@
                                 meningkatkan metode mengajar di dalam dan di luar kelas. Di Marsiajar, anda dapat
                                 berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan mengembangkan
                                 diri.</p>
-                            <a href="#" class="mb-2 d-block"><i class="icon-line2-call-in me-2"></i>+62812345678</a>
-                            <a href="#"><i class="icon-line2-envelope me-2"></i>info@marsiajar.com</a>
+                            <a href="#" class="mb-2 d-block"><i class="icon-line2-call-in me-2"></i>+62851599358648</a>
+                            <a href="mailto:info@marsiajar.com"><i class="icon-line2-envelope me-2"></i>info@marsiajar.com</a>
                         </div>
                         <div class="col-6 col-md-3">
                             @php
