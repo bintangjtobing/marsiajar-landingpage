@@ -29,36 +29,35 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                 <div class="col-lg-4">
 
                     <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
-                        <h4>Why choose <span>Us</span>.</h4>
+                        <h4>Siapa <span>Kami</span>?</h4>
                     </div>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quidem minus id omnis, nam
-                        expedita, ea fuga commodi voluptas iusto, hic autem deleniti dolores explicabo labore enim
-                        repellat earum perspiciatis.</p>
+                    <p>Marsiajar adalah platform yang dibangun agar pendidik seperti anda dapat mempersiapkan bahan ajar
+                        secara lebih efisien. Selain itu, anda juga dapat menambah penghasilan dengan mengunggah bahan
+                        ajar anda agar dapat menginspirasi guru-guru lainnya. </p>
 
                 </div>
 
                 <div class="col-lg-4">
 
                     <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
-                        <h4>Our <span>Mission</span>.</h4>
+                        <h4>Misi <span>Kami</span>.</h4>
                     </div>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quidem minus id omnis, nam
-                        expedita, ea fuga commodi voluptas iusto, hic autem deleniti dolores explicabo labore enim
-                        repellat earum perspiciatis.</p>
+                    <p>Mendukung pendidik mempersiapkan bahan ajar dan menstimulasi teacherpreneurship melalui bahan
+                        ajar yang anda buat. </p>
 
                 </div>
 
                 <div class="col-lg-4">
 
                     <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
-                        <h4>What we <span>Do</span>.</h4>
+                        <h4>Apa yang kami <span>lakukan</span>?</h4>
                     </div>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quidem minus id omnis, nam
-                        expedita, ea fuga commodi voluptas iusto, hic autem deleniti dolores explicabo labore enim
-                        repellat earum perspiciatis.</p>
+                    <p>Menyediakan platform bagi pendidik seperti anda untuk dapat menampilkan portofolio bahan ajar dan
+                        memastikan setiap tampilan laman bahan ajar tersebut menjadi sumber penghasilan tambahan bagi
+                        pendidik kreator.</p>
 
                 </div>
 
@@ -113,7 +112,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
             <div class="col-md-7 col-padding">
                 <div>
                     <div class="heading-block">
-                        <span class="before-heading color">Our History</span>
+                        <span class="before-heading color">Sejarah Kami</span>
                         <h3>Marsiajaran Teaching Community</h3>
                     </div>
 
