@@ -290,7 +290,8 @@
                                 meningkatkan metode mengajar di dalam dan di luar kelas. Di Marsiajar, anda dapat
                                 berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan mengembangkan
                                 diri.</p>
-                            <a href="#" class="mb-2 d-block"><i class="icon-line2-call-in me-2"></i>+62851599358648</a>
+                            <a href="https://wa.me/62851599358648" class="mb-2 d-block"><i
+                                    class="icon-line2-call-in me-2"></i>+62851599358648</a>
                             <a href="mailto:info@marsiajar.com"><i class="icon-line2-envelope me-2"></i>info@marsiajar.com</a>
                         </div>
                         <div class="col-6 col-md-3">

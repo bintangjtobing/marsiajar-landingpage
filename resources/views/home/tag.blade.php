@@ -11,7 +11,7 @@
         <h1>{{$sub->sub_categories_name}}</h1>
         <span>{{$sub->description}}</span>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{$sub->sub_categories_name}}</li>
         </ol>
     </div>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="widget clearfix">
                             <iframe
-                                src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fboxity-central-indonesia&amp;width=240&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=499481203443583"
+                                src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FMarsiajaran&amp;width=240&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=499481203443583"
                                 style="border:none; overflow:hidden; width:240px; height:290px;"></iframe>
                         </div>
 

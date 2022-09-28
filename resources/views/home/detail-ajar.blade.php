@@ -13,8 +13,8 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
         <h1>Rincian Minggu Efektif Tematik Terpadu K13 Edisi Revisi Semester Ganjil</h1>
         <span>Some quick example text to build on the card title and make up the bulk of the card's content.</span>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Rencana Ajar</a></li>
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/educative/rencana-ajar">Rencana Ajar</a></li>
             <li class="breadcrumb-item active" aria-current="page">Rincian Minggu Efektif Tematik Terpadu K13 Edisi
                 Revisi Semester Ganjil</li>
         </ol>

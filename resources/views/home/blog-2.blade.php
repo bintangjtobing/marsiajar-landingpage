@@ -41,8 +41,8 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                                             <li><i class="icon-calendar3"></i> {{$blog->created_at}}</li>
                                             <li><a href="#"><i class="icon-user"></i> {{$blog->user->name}}</a></li>
                                             <li><i class="icon-folder-open"></i> <a
-                                                    href="#">{{$blog->categories->categories_name ?? ''}}</a>, <a
-                                                    href="#">{{$blog->subcategories->sub_categories_name ?? ''}}</a>
+                                                    href="#">{{$blog->categories->categories_name ?? 'Undetected Category'}}</a>, <a
+                                                    href="{{$blog->subcategories['sub_categories_name'] ?? 'Undetected Sub Categories'}}">{{$blog->subcategories->sub_categories_name ?? 'Undetected Sub Category'}}</a>
                                             </li>
                                             <li><a href="#"><i class="icon-comments"></i> 13</a>
                                             </li>
@@ -88,7 +88,7 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                         <div class="widget clearfix">
 
                             <h4>Connect with Us</h4>
-                            <a href="#" class="social-icon si-colored si-small si-facebook" data-bs-toggle="tooltip"
+                            <a href="/facebook" class="social-icon si-colored si-small si-facebook" data-bs-toggle="tooltip"
                                 data-bs-placement="top" title="Facebook">
                                 <i class="icon-facebook"></i>
                                 <i class="icon-facebook"></i>
@@ -99,7 +99,7 @@ WMS, boxity financial, boxity indonesia, news from boxity')
                                 </a>
 
 
-                                <a href="#" class="social-icon si-colored si-small si-instagram"
+                                <a href="/instagram" class="social-icon si-colored si-small si-instagram"
                                     data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram">
                                     <i class="icon-instagram"></i>
                                     <i class="icon-instagram"></i>

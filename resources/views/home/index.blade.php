@@ -126,8 +126,9 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                             <div class="card-body">
                                 <h4 class="card-title fw-bold mb-2"><a href="/read/{{$item->slug}}">{{$item->title}}</a>
                                 </h4>
-                                <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a href="#"
-                                        class="text-black-50">{{$item->subcategories['sub_categories_name'] ?? 'Undetected categories'}}</a>
+                                <p class="mb-2 card-title-sub text-uppercase fw-normal ls1"><a
+                                        href="/tag/{{$item->subcategories['slug'] ?? 'Undetected Sub Category'}}"
+                                        class="text-black-50">{{$item->subcategories['sub_categories_name'] ?? 'Undetected Category'}}</a>
                                 </p>
                                 <div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i
                                         class="icon-star3"></i><i class="icon-star3"></i><i

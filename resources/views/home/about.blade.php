@@ -11,7 +11,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
         <h1>About Us</h1>
         <span>Everything you need to know about our Company</span>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">About Us</li>
         </ol>
     </div>
