@@ -41,7 +41,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                 <div class="col-lg-4">
 
                     <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
-                        <h4>Misi <span>Kami</span>.</h4>
+                        <h4>Misi <span>Kami</span>?</h4>
                     </div>
 
                     <p>Mendukung pendidik mempersiapkan bahan ajar dan menstimulasi teacherpreneurship melalui bahan
@@ -65,7 +65,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
 
         </div>
 
-        <div class="section m-0">
+        {{-- <div class="section m-0">
             <div class="container clearfix">
 
                 <div class="row col-mb-50">
@@ -101,7 +101,7 @@ dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan
                 </div>
 
             </div>
-        </div>
+        </div> --}}
 
         <div class="row align-items-stretch">
 
