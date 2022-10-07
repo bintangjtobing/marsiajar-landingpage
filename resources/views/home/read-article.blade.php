@@ -355,7 +355,7 @@
                     <div class="sidebar-widgets-wrap">
                         <div class="widget clearfix">
 
-                            <h4>Tag Cloud</h4>
+                            <h4>Materi Pelajaran</h4>
                             <div class="tagcloud">
                                 @foreach ($sub as $sub)
                                 <a href="/tag/{{$sub['slug']}}">{{$sub->sub_categories_name}}</a>
