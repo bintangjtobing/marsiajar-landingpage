@@ -182,7 +182,7 @@ class webpageController extends Controller
         }
         // Get earnings
         $n = $blogView->views;
-        $limit = 35;
+        $limit = 100;
         $total = 0;
         for (
             $n;
