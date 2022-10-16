@@ -210,7 +210,8 @@ class webpageController extends Controller
     public function getArticleByTag($slug)
     {
         $sub = subCategories::where('slug', $slug)->first();
-        $cat = categories::all();
+        // $cat = categories::all();
+        $cat = subCategories::all();
         $blog = blog::with('user', 'image', 'subcategories', 'categories', 'image', 'comments')->orderBy('created_at', 'DESC')->where('subcategory', $sub->id)->get();
         // return response()->json($blog);
         return view('home.tag', ['blog' => $blog, 'sub' => $sub, 'cat' => $cat]);

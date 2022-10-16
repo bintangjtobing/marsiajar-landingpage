@@ -6,6 +6,13 @@
 -----------------------------------------------------------------*/
 
 
-.heading-block span{
-    
+.heading-block span {}
+
+.entry-image,
+.entry-image>a,
+.entry-image .slide a,
+.entry-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
 }

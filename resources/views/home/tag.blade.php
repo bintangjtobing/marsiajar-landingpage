@@ -32,8 +32,9 @@
                         @foreach ($blog as $item)
                         <div class="col-sm-6 col-12 mb-5">
                             <div class="card course-card hover-effect border-0">
-                                <a href="/read/{{$item->slug}}"><img class="card-img-top" src="{{$item->image->file}}"
-                                        alt=" Card image cap"></a>
+                                <a href="/read/{{$item->slug}}"><img class="card-img-top"
+                                        style="width: 100%;height: 300px;object-fit: cover;"
+                                        src="{{$item->image->file}}" alt=" Card image cap"></a>
                                 <div class="card-body">
                                     <h4 class="card-title fw-bold mb-2"><a
                                             href="/read/{{$item->slug}}">{{$item->title}}</a></h4>
@@ -73,7 +74,7 @@
                             <h4>Kelas</h4>
                             <ul>
                                 @foreach ($cat as $sub)
-                                <li><a href="/educative/{{$sub->slug}}">{{$sub->categories_name}}</a></li>
+                                <li><a href="/tag/{{$sub->slug}}">{{$sub->sub_categories_name}}</a></li>
                                 @endforeach
                             </ul>
 
