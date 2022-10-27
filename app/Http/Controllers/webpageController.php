@@ -89,7 +89,7 @@ class webpageController extends Controller
     }
     public function index()
     {
-        $sub = subCategories::with('image')->where('slug', '!=', 'umum')->get();
+        $sub = subCategories::with('image')->where('slug', '!=', 'umum')->orWhere('slug','!=','artikel')->get();
         $article = blog::with('user', 'image', 'subcategories', 'categories', 'comments')->where('status', 1)->where('category', '!=', 3)->orWhere('subcategory', '!=', 5)->orderBy('created_at', 'DESC')->limit(6)->get();
         $creator = User::withCount('blog')->orderBy('blog_count', 'DESC')->limit(4)->get();
         // return response()->json($creator);
