@@ -67,8 +67,7 @@
                                 @if ($article->file)
                                 <?php $getExt = substr($article->file['files'], -3) ?>
                                 @if ($getExt == 'pdf')
-                                <iframe src="{{$article->file['files']}}" align="center" height="620" width="100%"
-                                    frameborder="0" scrolling="auto"></iframe>
+                                <iframe src="{{$article->file['files']}}#toolbar=0&navpanes=0" align="center" class="pdfViewerFiles" height="620" width="100%" frameborder="0" scrolling="auto"></iframe>
                                 @endif
                                 @if($getExt == 'ptx' || $getExt == 'ppt')
                                 <iframe
@@ -108,7 +107,7 @@
 
                                 <!-- Post Single - Share
 										============================================= -->
-                                <div class="si-share border-0 d-flex justify-content-between align-items-center">
+                                {{-- <div class="si-share border-0 d-flex justify-content-between align-items-center">
                                     <span>Share this Post:</span>
                                     <div>
                                         <a href="#" class="social-icon si-borderless si-facebook">
@@ -136,7 +135,7 @@
                                             <i class="icon-email3"></i>
                                         </a>
                                     </div>
-                                </div><!-- Post Single - Share End -->
+                                </div><!-- Post Single - Share End --> --}}
 
                             </div>
                         </div><!-- .entry end -->

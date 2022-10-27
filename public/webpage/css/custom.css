@@ -16,3 +16,11 @@
     height: 450px;
     object-fit: cover;
 }
+
+#download {
+    display: none;
+}
+
+#print {
+    display: none;
+}

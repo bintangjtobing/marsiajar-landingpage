@@ -18718,3 +18718,8 @@ label.checkbox {
     -webkit-animation-name: fadeOutUpSmall;
     animation-name: fadeOutUpSmall;
 }
+
+button #print .toolbarButton .hiddenMediumView,
+button #download .toolbarButton .hiddenMediumView {
+    display: none !important;
+}
