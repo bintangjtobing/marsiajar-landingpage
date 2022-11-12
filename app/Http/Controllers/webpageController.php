@@ -29,6 +29,16 @@ use Illuminate\Support\Str;
 
 class webpageController extends Controller
 {
+    public function checkUserExist(Request $request)
+    {
+        $getEmail = $request->email;
+        $checkUser = User::where('email', $getEmail)->count();
+        if ($checkUser != 0) {
+            return back()->with('successCheckUser','Thank you for being our member :)');
+        } else {
+            return back()->with('failedCheckUser', 'Thank you for being our member :)');
+        }
+    }
     public function register()
     {
         return view('home.register');

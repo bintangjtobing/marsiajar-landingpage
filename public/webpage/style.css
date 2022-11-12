@@ -18720,6 +18720,10 @@ label.checkbox {
 }
 
 button #print .toolbarButton .hiddenMediumView,
-button #download .toolbarButton .hiddenMediumView {
+button #download .toolbarButton .hiddenMediumView,
+#download::before,
+#secondaryDownload::before,
+#print::before,
+#secondaryPrint::before {
     display: none !important;
 }

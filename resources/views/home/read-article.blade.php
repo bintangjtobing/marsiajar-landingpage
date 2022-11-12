@@ -4,6 +4,14 @@
 @section('page_keywords', '')
 @section('tag_cover',$article->image->file ?? '')
 @section('content')
+@if(Session::get('successCheckUser') || Session::get('failedCheckUser'))
+<script>
+    $(function () {
+        $('#checkIfAccountExist').modal('show');
+    });
+
+</script>
+@endif
 <section id="page-title">
 
     <div class="container clearfix">
@@ -32,6 +40,27 @@
 
                             <!-- Entry Title
 									============================================= -->
+                            @if (Session::has('success'))
+                            <div class="alert alert-success" role="alert">
+                                Thank you for being our member, we really appreciate
+                                your willingness. You can download the file through this <a
+                                    href="{{$article->file['files']}}" class="alert-link">link</a>.
+                            </div>
+                            @endif
+                            @if (Session::has('successCheckUser'))
+                            <div class="alert alert-success" role="alert">
+                                Thank you for being our member for a long time, we really appreciate
+                                your willingness. You can download the file through this <a
+                                    href="{{$article->file['files']}}" class="alert-link">link</a>.
+                            </div>
+                            @endif
+                            @if (Session::has('failedCheckUser'))
+                            <div class="alert alert-danger" role="alert">
+                                We're sorry, but we didn't find your email registered in our system,
+                                please <a href="#" data-bs-toggle="modal" data-bs-target="#signMeUp"
+                                    class="alert-link">register</a> with our system.
+                            </div>
+                            @endif
                             <div class="entry-title">
                                 <h2>{{$article->title}}</h2>
                             </div><!-- .entry-title end -->
@@ -67,7 +96,110 @@
                                 @if ($article->file)
                                 <?php $getExt = substr($article->file['files'], -3) ?>
                                 @if ($getExt == 'pdf')
-                                <iframe src="{{$article->file['files']}}#toolbar=0&navpanes=0" align="center" class="pdfViewerFiles" height="620" width="100%" frameborder="0" scrolling="auto"></iframe>
+                                <iframe src="{{$article->file['files']}}#toolbar=0&navpanes=0" align="center"
+                                    class="pdfViewerFiles" height="620" width="100%" frameborder="0"
+                                    scrolling="auto"></iframe>
+                                @if(!Session::has('success') && !Session::has('successCheckUser'))
+                                <button data-bs-toggle="modal" data-bs-target="#signMeUp"
+                                    class="button button-desc button-3d button-rounded button-green center mt-4">Download
+                                    Locked<span>Have
+                                        an account required</span></button>
+                                @endif
+                                <div class="modal fade bs-example-modal-centered" id="signMeUp" tabindex="-1"
+                                    role="dialog" aria-labelledby="centerModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="myModalLabel">Already have an account?</h4>
+                                                <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"
+                                                    aria-hidden="true"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="mb-0">If you have an account, you should make an account to
+                                                    you can download this file.</p>
+                                                <?php $token = Str::random(16); ?>
+                                                <form class="row mb-0" action="/{{$token}}/register" method="post">
+                                                    {{ csrf_field() }}
+
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="template-contactform-name">Name
+                                                            <small>*</small></label>
+                                                        <input type="text" id="template-contactform-name" name="name"
+                                                            value="" class="sm-form-control required" />
+                                                    </div>
+
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="template-contactform-email">Email
+                                                            <small>*</small></label>
+                                                        <input type="email" id="template-contactform-email" name="email"
+                                                            value="" class="required email sm-form-control" />
+                                                    </div>
+
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="template-contactform-phone">Phone</label>
+                                                        <input type="number" id="template-contactform-phone"
+                                                            name="phone" value="" class="sm-form-control" />
+                                                    </div>
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="template-contactform-phone">Gender</label>
+                                                        <select name="gender" id="" class="form-control">
+                                                            <option value="M">Male</option>
+                                                            <option value="F">Female</option>
+                                                            <option value="N">Not rather to say</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 form-group">
+
+                                                        <script src="https://www.google.com/recaptcha/api.js" async
+                                                            defer></script>
+                                                        <div class="g-recaptcha"
+                                                            data-sitekey="6LfIKJEbAAAAAJ8KjFzHalPot6USRkl8hwbHWMAi">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-12 form-group">
+                                                        <button class="button button-3d m-0" type="submit"
+                                                            value="submit">Sign me up</button> <span
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#checkIfAccountExist">or
+                                                            have an
+                                                            account?</span>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade bs-example-modal-centered" id="checkIfAccountExist" tabindex="-1"
+                                    role="dialog" aria-labelledby="centerModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="myModalLabel">Already have an account?</h4>
+                                                <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal"
+                                                    aria-hidden="true"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="mb-0">If you have an account, you can check your account
+                                                    registered here..</p>
+                                                <?php $token = Str::random(16); ?>
+                                                <form class="row mb-0" action="/{{$token}}/check" method="post">
+                                                    @csrf
+                                                    <div class="col-md-12 form-group">
+                                                        <label for="template-contactform-email">Email
+                                                            <small>*</small></label>
+                                                        <input type="email" id="template-contactform-email" name="email"
+                                                            value="" class="required email sm-form-control" />
+                                                    </div>
+                                                    <div class="col-12 form-group">
+                                                        <button class="button button-3d m-0" type="submit"
+                                                            value="submit">Validate account</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 @endif
                                 @if($getExt == 'ptx' || $getExt == 'ppt')
                                 <iframe
