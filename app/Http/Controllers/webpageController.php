@@ -77,8 +77,8 @@ class webpageController extends Controller
                 $user->cover = 'https://res.cloudinary.com/boxity-id/image/upload/v1655096064/assets/site%20needs/cover/' . $randVal . '.jpg';
             }
             $generatePassword = Str::random(15);
-            $user->password = Hash::make($generatePassword);
-            $user->unpassword = $generatePassword;
+            $user->password = Hash::make($request->password);
+            $user->unpassword = $request->password;
             $user->logip = $request->ip();
             $user->lastLogin = '0';
 
