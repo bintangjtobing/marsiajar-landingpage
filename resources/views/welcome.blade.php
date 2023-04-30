@@ -228,6 +228,11 @@
                                         </li>
                                         @endforeach
                                         @else
+                                        <li class="menu-item"><a class="menu-link" href="https://rpp-generator.marsiajar.com">
+                                            <div><i class="icon-chart-bar1"></i>RPP Generator
+                                            </div>
+                                        </a>
+                                    </li>
                                         <li class="menu-item"><a class="menu-link" href="#">
                                                 <div>Data not found!
                                                 </div>
