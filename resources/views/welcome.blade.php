@@ -221,6 +221,12 @@
                                         <div><i class="icon-line-grid"></i>Cari Bahan Ajar</div>
                                     </a>
                                     <ul class="sub-menu-container">
+                                        <li class="menu-item"><a class="menu-link"
+                                            href="https://rpp-generator.marsiajar.com" target="_blank">
+                                            <div><i class="icon-chart-bar1"></i>RPP Generator
+                                            </div>
+                                        </a>
+                                    </li>
                                         @if (!$getCategories->isEmpty())
                                             @foreach ($getCategories as $item)
                                                 <li class="menu-item"><a class="menu-link"
@@ -238,12 +244,6 @@
                                                 </a>
                                             </li>
                                         @endif
-                                        <li class="menu-item"><a class="menu-link"
-                                                href="https://rpp-generator.marsiajar.com">
-                                                <div><i class="icon-chart-bar1"></i>RPP Generator
-                                                </div>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </li>
                                 <li class="menu-item"><a href="/news" class="menu-link">
