@@ -1,496 +1,180 @@
 @extends('welcome')
-@section('title', 'About')
-@section('page_description', 'This page is about who Boxity Central Indonesia is, what is our vision, the companies we
-have worked with, whether its a contract system and others.')
-@section('page_keywords', 'about boxity, boxity, boxityerp, realizeboxity, boxity central
-indonesia, erp boxity,
-warehouse management,
-human resources management, financial management, boxity warehouse, boxity WMS, boxity financial, boxity indonesia')
+@section('title', 'About Us')
+@section('page_description', 'Marsiajar merupakan sebuah komunitas Mari Siap Mengajar dimana guru-guru di Indonesia
+dapat saling berbagi dan berkolaborasi untuk meningkatkan metode mengajar di dalam dan di luar kelas. Di Marsiajar, anda
+dapat berbagi ide dan metode mengajar, berkolaborasi mendesain lembar kerja, dan mengembangkan diri.')
+@section('page_keywords', '')
 @section('content')
-<section id="about-2" class="about-section">
-    <div class="bg-inner bg-lightgrey inner-page-hero division">
-        <div class="container">
+<section id="page-title">
 
+    <div class="container clearfix">
+        <h1>About Us</h1>
+        <span>Everything you need to know about our Company</span>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        </ol>
+    </div>
 
-            <!-- ABOUT-2 TITLE -->
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-8">
-                    <div class="about-2-title">
+</section><!-- #page-title end -->
 
-                        <!-- Title -->
-                        <h2 class="h2-xl">Digitize your business <br> with us</h2>
+<!-- Content
+		============================================= -->
+<section id="content">
+    <div class="content-wrap">
+        <div class="container clearfix">
 
-                        <!-- Text -->
-                        {{-- <p class="p-xl">Quaerat sodales sapien and euismod blandit vitae ipsum primis cubilia
-                            undo laoreet augue luctus magna and dolor luctus egestas sapien
-                        </p> --}}
+            <div class="row col-mb-50 mb-0">
 
-                    </div>
-                </div>
-            </div> <!-- END ABOUT-2 TITLE -->
+                <div class="col-lg-4">
 
-
-            <!-- ABOUT-2 IMAGES -->
-            <div class="about-2-images">
-                <div class="row row-cols-1 row-cols-md-2">
-
-
-                    <!-- IMAGES-1 -->
-                    <div class="col col-md-5">
-                        <img class="img-fluid" src="{!!asset('webpage/images/about-1-img.jpg')!!}" alt="about-image">
+                    <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                        <h4>Siapa <span>Kami</span>?</h4>
                     </div>
 
+                    <p>Marsiajar adalah platform yang dibangun agar pendidik seperti anda dapat mempersiapkan bahan ajar
+                        secara lebih efisien. Selain itu, anda juga dapat menambah penghasilan dengan mengunggah bahan
+                        ajar anda agar dapat menginspirasi guru-guru lainnya. </p>
 
-                    <!-- IMAGES-2 -->
-                    <div class="col col-md-7">
-                        <img class="img-fluid" src="{!!asset('webpage/images/about-2-img.jpg')!!}" alt="about-image">
-                    </div>
-
-
-                </div> <!-- End row -->
-            </div> <!-- END ABOUT-2 IMAGES -->
-
-
-        </div> <!-- End container -->
-    </div> <!-- End bg-inner -->
-</section> <!-- END ABOUT-2 -->
-
-
-
-
-<!-- FEATURES-4
-			============================================= -->
-<section id="features-4" class="wide-60 features-section division">
-    <div class="container">
-
-
-
-        <!-- FEATURES-4 WRAPPER -->
-        <div class="fbox-4-wrapper fbox-4-wide">
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col">
-                    <div class="fbox-4 pr-25 mb-40 wow fadeInUp">
-
-                        <!-- Icon -->
-                        <div class="fbox-ico">
-                            <div class="ico-65">
-                                <span class="flaticon-line-graph-1"></span>
-                            </div>
-                        </div>
-
-                        <!-- Text -->
-                        <div class="fbox-txt">
-                            <h5 class="h5-md">{{__('who_is_boxity')}}</h5>
-
-                            <!-- Text -->
-                            <p>
-                                {{__('dsc_who_is_boxity')}}
-                            </p>
-
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="fbox-4 pr-25 mb-40 wow fadeInUp">
-
-                        <!-- Icon -->
-                        <div class="fbox-ico">
-                            <div class="ico-65">
-                                <span class="flaticon-arrow"></span>
-                            </div>
-                        </div>
-
-                        <!-- Text -->
-                        <div class="fbox-txt">
-                            <h5 class="h5-md">{{__('our_vision')}}</h5>
-
-                            <!-- Text -->
-                            <p>{{__('dsc_our_vision')}}</p>
-
-                        </div>
-
-                    </div>
                 </div>
 
+                <div class="col-lg-4">
+
+                    <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                        <h4>Misi <span>Kami</span>?</h4>
+                    </div>
+
+                    <p>Mendukung pendidik mempersiapkan bahan ajar dan menstimulasi teacherpreneurship melalui bahan
+                        ajar yang anda buat. </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="heading-block fancy-title border-bottom-0 title-bottom-border">
+                        <h4>Apa yang kami <span>lakukan</span>?</h4>
+                    </div>
+
+                    <p>Menyediakan platform bagi pendidik seperti anda untuk dapat menampilkan portofolio bahan ajar dan
+                        memastikan setiap tampilan laman bahan ajar tersebut menjadi sumber penghasilan tambahan bagi
+                        pendidik kreator.</p>
+
+                </div>
 
             </div>
-        </div> <!-- END FEATURES-4 WRAPPER -->
 
-        <hr class="divider">
-        <section id="features-4" class="wide-60 features-section division">
-            <div class="container">
-
-
-                <!-- SECTION TITLE -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 col-xl-8">
-                        <div class="section-title title-01 mb-70">
-
-                            <!-- Title -->
-                            <h2 class="h2-md">{{__('were_better')}}</h2>
-
-                            <!-- Text -->
-                            <p class="p-xl">{{__('why_are_we_so_confident')}}
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- FEATURES-4 WRAPPER -->
-                <div class="fbox-4-wrapper">
-                    <div class="row row-cols-1 row-cols-md-2">
-
-
-                        <!-- FEATURE BOX #1 -->
-                        <div class="col">
-                            <div class="fbox-4 pc-25 mb-40 wow fadeInUp">
-
-                                <!-- Icon -->
-                                <div class="fbox-ico">
-                                    <div class="ico-60 shape-ico boxity-primary-color">
-                                        <img class="ico-bkg" src="{!!asset('images/boxity/ico-bkg.png')!!}"
-                                            alt="ico-bkg">
-                                        <span class="flaticon-signal"></span>
-                                    </div>
-                                </div>
-
-                                <!-- Text -->
-                                <div class="fbox-txt">
-
-                                    <!-- Title -->
-                                    <h5 class="h5-md">{{__('quick_access')}}</h5>
-
-                                    <!-- Text -->
-                                    <p class="p-lg">{{__('dsc_quick_access')}}
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <!-- FEATURE BOX #2 -->
-                        <div class="col">
-                            <div class="fbox-4 pc-25 mb-40 wow fadeInUp">
-
-                                <!-- Icon -->
-                                <div class="fbox-ico">
-                                    <div class="ico-60 shape-ico boxity-primary-color">
-                                        <img class="ico-bkg" src="{!!asset('images/boxity/ico-bkg.png')!!}"
-                                            alt="ico-bkg">
-                                        <span class="flaticon-smartphone-2"></span>
-                                    </div>
-                                </div>
-
-                                <!-- Text -->
-                                <div class="fbox-txt">
-
-                                    <!-- Title -->
-                                    <h5 class="h5-md">{{__('device_accessibility')}}</h5>
-
-                                    <!-- Text -->
-                                    <p class="p-lg">{{__('dsc_device_accessibility')}}
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <!-- FEATURE BOX #3 -->
-                        <div class="col">
-                            <div class="fbox-4 pc-25 mb-40 wow fadeInUp">
-
-                                <!-- Icon -->
-                                <div class="fbox-ico">
-                                    <div class="ico-60 shape-ico boxity-primary-color">
-                                        <img class="ico-bkg" src="{!!asset('images/boxity/ico-bkg.png')!!}"
-                                            alt="ico-bkg">
-                                        <span class="flaticon-hosting-servers"></span>
-                                    </div>
-                                </div>
-
-                                <!-- Text -->
-                                <div class="fbox-txt">
-
-                                    <!-- Title -->
-                                    <h5 class="h5-md">{{__('customers_private')}}</h5>
-
-                                    <!-- Text -->
-                                    <p class="p-lg">{{__('dsc_customers_private')}}
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <!-- FEATURE BOX #4 -->
-                        <div class="col">
-                            <div class="fbox-4 pc-25 mb-40 wow fadeInUp">
-
-                                <!-- Icon -->
-                                <div class="fbox-ico">
-                                    <div class="ico-60 shape-ico boxity-primary-color">
-                                        <img class="ico-bkg" src="{!!asset('images/boxity/ico-bkg.png')!!}"
-                                            alt="ico-bkg">
-                                        <span class="flaticon-flow-chart"></span>
-                                    </div>
-                                </div>
-
-                                <!-- Text -->
-                                <div class="fbox-txt">
-
-                                    <!-- Title -->
-                                    <h5 class="h5-md">{{__('integration')}}</h5>
-
-                                    <!-- Text -->
-                                    <p class="p-lg">{{__('dsc_integration')}}
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <!-- FEATURE BOX #5 -->
-                        <div class="col">
-                            <div class="fbox-4 pc-25 mb-40 wow fadeInUp">
-
-                                <!-- Icon -->
-                                <div class="fbox-ico">
-                                    <div class="ico-60 shape-ico boxity-primary-color">
-                                        <img class="ico-bkg" src="{!!asset('images/boxity/ico-bkg.png')!!}"
-                                            alt="ico-bkg">
-                                        <span class="flaticon-cloud-computing"></span>
-                                    </div>
-                                </div>
-
-                                <!-- Text -->
-                                <div class="fbox-txt">
-
-                                    <!-- Title -->
-                                    <h5 class="h5-md">{{__('storage_backup')}}</h5>
-
-                                    <!-- Text -->
-                                    <p class="p-lg">{{__('dsc_storage_backup')}}
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <!-- FEATURE BOX #6 -->
-                        <div class="col">
-                            <div class="fbox-4 pc-25 mb-40 wow fadeInUp">
-
-                                <!-- Icon -->
-                                <div class="fbox-ico">
-                                    <div class="ico-60 shape-ico boxity-primary-color">
-                                        <img class="ico-bkg" src="{!!asset('images/boxity/ico-bkg.png')!!}"
-                                            alt="ico-bkg">
-                                        <span class="flaticon-shield"></span>
-                                    </div>
-                                </div>
-
-                                <!-- Text -->
-                                <div class="fbox-txt">
-
-                                    <!-- Title -->
-                                    <h5 class="h5-md">{{__('secure_safe')}}</h5>
-
-                                    <!-- Text -->
-                                    <p class="p-lg">{{__('dsc_secure_safe')}}
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div> <!-- END FEATURES-4 WRAPPER -->
-
-
-            </div> <!-- End container -->
-        </section>
-
-    </div> <!-- End container -->
-</section> <!-- END FEATURES-4 -->
-
-
-<hr class="divider">
-<div id="brands-2" class="wide-70 brands-section division">
-    <div class="container">
-
-
-        <!-- BRANDS TITLE -->
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="brands-title text-center">
-                    <p class="p-xl">{{__('clients')}}</p>
-                </div>
-            </div>
         </div>
 
+        {{-- <div class="section m-0">
+            <div class="container clearfix">
 
-        <!-- BRANDS-2 WRAPPER -->
-        <div class="brands-2-wrapper">
-            <div class="row justify-content-md-center row-cols-2 row-cols-sm-3 row-cols-md-5">
-                <!-- BRAND LOGO IMAGE -->
-                <div class="col">
-                    <div class="brand-logo">
-                        <a href="#">
-                            <img class="img-fluid" src="{!!asset('images/boxity/partner-logo-12.png')!!}"
-                                alt="partner-boxity-central-indonesia" />
-                        </a>
+                <div class="row col-mb-50">
+
+                    <div class="col-sm-6 col-lg-3 text-center" data-animate="bounceIn">
+                        <i class="i-plain i-xlarge mx-auto icon-line2-directions"></i>
+                        <div class="counter counter-lined"><span data-from="100" data-to="846"
+                                data-refresh-interval="50" data-speed="2000"></span>K+</div>
+                        <h5>Teaching Materials</h5>
                     </div>
-                </div>
 
-                <!-- BRAND LOGO IMAGE -->
-                <div class="col">
-                    <div class="brand-logo">
-                        <a href="#">
-                            <img class="img-fluid" src="{!!asset('images/boxity/partner-logo-1.png')!!}"
-                                alt="partner-boxity-central-indonesia" />
-                        </a>
+                    <div class="col-sm-6 col-lg-3 text-center" data-animate="bounceIn" data-delay="200">
+                        <i class="i-plain i-xlarge mx-auto mb-0 icon-line2-graph"></i>
+                        <div class="counter counter-lined"><span data-from="3000" data-to="15360"
+                                data-refresh-interval="100" data-speed="2500"></span>+</div>
+                        <h5>Teachers Joint</h5>
                     </div>
-                </div>
 
-
-                <!-- BRAND LOGO IMAGE -->
-                <div class="col">
-                    <div class="brand-logo">
-                        <a href="#">
-                            <img class="img-fluid" src="{!!asset('images/boxity/partner-logo-3.png')!!}"
-                                alt="partner-boxity-central-indonesia" />
-                        </a>
+                    <div class="col-sm-6 col-lg-3 text-center" data-animate="bounceIn" data-delay="400">
+                        <i class="i-plain i-xlarge mx-auto mb-0 icon-line2-layers"></i>
+                        <div class="counter counter-lined"><span data-from="10" data-to="408" data-refresh-interval="25"
+                                data-speed="3500"></span>*</div>
+                        <h5>No. of materials</h5>
                     </div>
-                </div>
 
-
-                <!-- BRAND LOGO IMAGE -->
-                <div class="col">
-                    <div class="brand-logo">
-                        <a href="#">
-                            <img class="img-fluid" src="{!!asset('images/boxity/partner-logo-4.png')!!}"
-                                alt="partner-boxity-central-indonesia" />
-                        </a>
+                    <div class="col-sm-6 col-lg-3 text-center" data-animate="bounceIn" data-delay="600">
+                        <i class="i-plain i-xlarge mx-auto mb-0 icon-line2-clock"></i>
+                        <div class="counter counter-lined"><span data-from="60" data-to="1200"
+                                data-refresh-interval="30" data-speed="2700"></span>+</div>
+                        <h5>Hours of Sharing Materials</h5>
                     </div>
-                </div>
 
-
-                <!-- BRAND LOGO IMAGE -->
-                <div class="col">
-                    <div class="brand-logo">
-                        <a href="#">
-                            <img class="img-fluid" src="{!!asset('images/boxity/partner-logo-5.png')!!}"
-                                alt="partner-boxity-central-indonesia">
-                        </a>
-                    </div>
-                </div>
-
-
-                <!-- BRAND LOGO IMAGE -->
-                <div class="col">
-                    <div class="brand-logo">
-                        <a href="#">
-                            <img class="img-fluid" src="{!!asset('images/boxity/partner-logo-6.png')!!}"
-                                alt="partner-boxity-central-indonesia">
-                        </a>
-                    </div>
-                </div>
-
-
-                <!-- BRAND LOGO IMAGE -->
-                <div class="col">
-                    <div class="brand-logo">
-                        <a href="#">
-                            <img class="img-fluid" src="{!!asset('images/boxity/partner-logo-7.png')!!}"
-                                alt="partner-boxity-central-indonesia">
-                        </a>
-                    </div>
-                </div>
-
-
-                <!-- BRAND LOGO IMAGE -->
-                <div class="col">
-                    <div class="brand-logo">
-                        <a href="#">
-                            <img class="img-fluid" src="{!!asset('images/boxity/partner-logo-8.png')!!}"
-                                alt="partner-boxity-central-indonesia">
-                        </a>
-                    </div>
-                </div>
-
-
-                <!-- BRAND LOGO IMAGE -->
-                <div class="col">
-                    <div class="brand-logo">
-                        <a href="#">
-                            <img class="img-fluid" src="{!!asset('images/boxity/partner-logo-9.png')!!}"
-                                alt="partner-boxity-central-indonesia">
-                        </a>
-                    </div>
                 </div>
 
             </div>
-        </div> <!-- END BRANDS-2 WRAPPER -->
+        </div> --}}
 
+        <div class="row align-items-stretch">
 
-    </div> <!-- End container -->
-</div>
+            <div class="col-md-5 col-padding min-vh-75" style="background:
+                url('{!!asset('webpage/demos/marsiajar/album/IMG_20180825_153145.jpg')!!}')
+                center center no-repeat; background-size: cover;"></div>
 
-
-<!-- DIVIDER LINE -->
-<hr class="divider">
-
-
-
-<!-- CALL TO ACTION-5
-			============================================= -->
-<div id="cta-7" class="cta-section division">
-    <div class="container">
-        <div class="cta-7-wrapper bg-snow">
-            <div class="row d-flex align-items-center">
-
-                <div class="col-lg-12 text-center">
-                    <div class="cta-7-img">
-                        <img src="{!!asset('images/boxity/just-logo.png')!!}" class="img-responsive img-logo-cta"
-                            alt="Boxity Central Indonesia Logo">
+            <div class="col-md-7 col-padding">
+                <div>
+                    <div class="heading-block">
+                        <span class="before-heading color">Sejarah Kami</span>
+                        <h3>Marsiajaran Teaching Community</h3>
                     </div>
-                </div>
 
-                <!-- TEXT -->
-                <div class="col-lg-12 text-center">
-                    <div class="cta-7-txt">
-                        <h3>{{__('ready_to_move')}}</h3>
-                        <p class="p-xl">{{__('dsc_ready_to_move')}}
-                        </p>
+                    <div class="row col-mb-50">
+
+                        <div class="col-lg-8">
+                            <p>Marsiajar adalah platform digital yang memungkinkan para pendidik untuk berkolaborasi dan
+                                mendapatkan penghasilan tambahan dari setiap bahan ajar yang mereka buat. Berdiri sejak
+                                tahun 2017, kami percaya bahwa sesungguhnya setiap pendidik merupakan inovator dan
+                                desainer pendidikan yang handal. Dalam mempersiapkan kelas, ada banyak persiapan yang
+                                dilakukan, mulai dari ruang kelas, bahan presentasi hingga bahan ajar yang dibuat
+                                sendiri untuk menyesuaikan kebutuhan kelasnya. Jangan biarkan bahan ajar buatan anda
+                                menganggur dan terbuang, Marsiajar menyediakan tempat bagi anda untuk menunjukkannya
+                                pada dunia dan memungkinkan anda untuk mendapatkan penghasilan tambahan melalui program
+                                guru kreator.
+                            </p>
+                            <h3>KOMUNITAS PENDIDIK PEMBELAJAR MARSIAJAR</h3>
+                            <p>Komunitas pendidik pembelajar merupakan komunitas pendidik dimana anda dapat
+                                berkolaborasi dan mengembangkan diri bersama pendidik lainnya. Anda dapat mengikuti
+                                berbagai pelatihan bagaimana membuat bahan ajar yang mumpuni serta mengembangkan diri
+                                sebagai pendidik profesional.</p>
+
+                            <h5>Mari bergabung ke grup telegram bersama kami:</h5>
+                            <a href="https://t.me/+9ASAtLFr-eNkMDdl"
+                                class="social-icon inline-block si-small si-light si-rounded si-telegram">
+                                <i class="icon-telegram"></i>
+                                <i class="icon-telegram"></i>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
+            </div>
 
+        </div>
 
-                <!-- BUTTON -->
-                <div class="col-lg-12 text-center">
-                    <div class="cta-7-btn">
-                        <a href="/contact" class="btn btn-skyboxity tra-boxity-hover my-4">{{__('contact_sales')}}</a>
-                    </div>
-                </div>
+        <div class="container clearfix">
 
+            <div class="clear"></div>
 
-            </div> <!-- End row -->
-        </div> <!-- End cta-7-wrapper -->
-    </div> <!-- End container -->
-</div>
+            <div class="heading-block center">
+                <h4>Our Media Partner</h4>
+            </div>
+
+            <ul class="clients-grid grid-2 grid-sm-3 grid-md-6 mb-0">
+                <li class="grid-item"><a href="http://logofury.com/logo/enzo.html"><img
+                            src="{!!asset('webpage/images/clients/1.png')!!}" alt="Clients"></a></li>
+                <li class="grid-item"><a href="http://logofury.com"><img
+                            src="{!!asset('webpage/images/clients/2.png')!!}" alt="Clients"></a>
+                </li>
+                <li class="grid-item"><a href="http://logofaves.com/2021/03/grabbt/"><img
+                            src="{!!asset('webpage/images/clients/3.png')!!}" alt="Clients"></a></li>
+                <li class="grid-item"><a href="http://logofaves.com/2021/01/ladera-granola/"><img
+                            src="{!!asset('webpage/images/clients/4.png')!!}" alt="Clients"></a></li>
+                <li class="grid-item"><a href="http://logofaves.com/2021/02/hershel-farms/"><img
+                            src="{!!asset('webpage/images/clients/5.png')!!}" alt="Clients"></a></li>
+                <li class="grid-item"><a href="http://logofury.com/logo/food-fight-radio.html"><img
+                            src="{!!asset('webpage/images/clients/6.png')!!}" alt="Clients"></a></li>
+            </ul>
+
+        </div>
+    </div>
+</section><!-- #content end -->
+
 @endsection

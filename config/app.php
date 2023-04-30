@@ -58,6 +58,15 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Client Information
+    |--------------------------------------------------------------------------
+    |
+    */
+    'client_name' => env('CLIENT_NAME'),
+    'application_based' => env('APP_BE', 'https://uat-system.marsiajar.com'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
     |
@@ -174,6 +183,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
     ],
 
@@ -226,6 +237,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
 
     ],
 
